@@ -28,226 +28,232 @@ $apropos = get_field("apropos");
 
 
 <!-- section 1-->
-<div class="container-fluid px-0">
+<header>
+	<div class="container">
 
-	<div class="row offset-1">
+		<div class="row offset-1">
 
 
-		<!--Partie gauche de la section-->
-		<div class="col-md-5  ">
-			<div class="row">
-				<h1> A propos</h1> 
+			<!--Partie gauche de la section-->
+			<div class="col-md-5  ">
+				<div class="row">
+					<h1> A propos</h1> 
 
+				</div>
+				<div class="row" style="padding-top:4rem;">
+
+					<div class="col-md-8 police_akkurat">
+						<h2><?= $apropos?></h2>
+					</div>
+
+				</div>
 			</div>
-			<div class="row" style="padding-top:4rem;">
 
-				<div class="col-md-8 police_akkurat">
-					<h2><?= $apropos?></h2>
+			<!--Partie droite de la section-->
+			<div class="col-md-6 ">
+				<div class="row">
+					<h1> Mes compétences</h1> 
+				</div>
+
+				<!-- SKILLS 1-->
+				<div class="row" style="padding-top:4rem;">
+					<div class="col-3 ">
+						<h4>PHP, Mysql, Wordpress</h4>
+					</div>
+					<div class="col-6 ">
+						<div style="padding-top: 0.5rem;">
+							<div class="w3-border">
+								<div class="w3-grey" style="height:24px;width:80%"></div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-1 ">
+						<h4>80%</h4>
+					</div>
+				</div>
+				<!-- SKILLS 2-->
+				<div class="row" style="padding-top:4rem;">
+					<div class="col-3 ">
+						<h4>HTML, CSS, JS, BOOTSTRAP</h4>
+					</div>
+					<div class="col-6 ">
+						<div style="padding-top: 0.5rem;">
+							<div class="w3-border">
+								<div class="w3-grey" style="height:24px;width:70%"></div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-1 ">
+						<h4>70%</h4>
+					</div>
 				</div>
 
 			</div>
 		</div>
 
-		<!--Partie droite de la section-->
-		<div class="col-md-6 ">
-			<div class="row">
-				<h1> Mes compétences</h1> 
-			</div>
-
-			<!-- SKILLS 1-->
-			<div class="row" style="padding-top:4rem;">
-				<div class="col-3 ">
-					<h4>PHP, Mysql, Wordpress</h4>
-				</div>
-				<div class="col-6 ">
-					<div style="padding-top: 0.5rem;">
-						<div class="w3-border">
-							<div class="w3-grey" style="height:24px;width:80%"></div>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="col-1 ">
-					<h4>80%</h4>
-				</div>
-			</div>
-			<!-- SKILLS 2-->
-			<div class="row" style="padding-top:4rem;">
-				<div class="col-3 ">
-					<h4>HTML, CSS, JS, BOOTSTRAP</h4>
-				</div>
-				<div class="col-6 ">
-					<div style="padding-top: 0.5rem;">
-						<div class="w3-border">
-							<div class="w3-grey" style="height:24px;width:70%"></div>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="col-1 ">
-					<h4>70%</h4>
-				</div>
-			</div>
-
+		<div class="row offset-1" style="padding-top:2rem;">
+			<h1>Formations</h1>
 		</div>
+
+		
 	</div>
 
-	<div class="row offset-1" style="padding-top:2rem;">
-		<h1>Formations</h1>
-	</div>
-
+</header>
+<main>
 	<!-- timeline Formations-->
 	<div class="row offset-3" style="padding-top:2rem;">
-		<div class="col-md-6">
+			<div class="col-md-6">
 
-			<div class="timeline">
-				<!--  bac + 4/5 -->
-				<div class="timeline__group">
-					<span class="timeline__year time" aria-hidden="true">2021-2023</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
+				<div class="timeline">
+					<!--  bac + 4/5 -->
+					<div class="timeline__group">
+						<span class="timeline__year time" aria-hidden="true">2021-2023</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
 
-								<h3 class="card__title r-title">bac+ 4 /+5 - Epsi Lyon</h3>
-							</header>
+									<h3 class="card__title r-title">bac+ 4 /+5 - Epsi Lyon</h3>
+								</header>
 
-							<div class="card__content">
-								<p>Expert en informatique et système d’information, titre RNCP de nv 7</p>
+								<div class="card__content">
+									<p>Expert en informatique et système d’information, titre RNCP de nv 7</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- stage bac +3 album -->
-				<div class="timeline__group">
-					<span class="timeline__year time" aria-hidden="true">2021</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
-								<time class="time" datetime="2021">
-									<span class="time__month">Mai-Juil</span>
-								</time>
-								<h3 class="card__title r-title">Agence Album Mâcon - Stage bac+3</h3>
-							</header>
+					<!-- stage bac +3 album -->
+					<div class="timeline__group">
+						<span class="timeline__year time" aria-hidden="true">2021</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
+									<time class="time" datetime="2021">
+										<span class="time__month">Mai-Juil</span>
+									</time>
+									<h3 class="card__title r-title">Agence Album Mâcon - Stage bac+3</h3>
+								</header>
 
-							<div class="card__content">
-								<p>Développement du nouveau site web de l’agence avec wordpress. Gestion du back office, utilisation d’ACF et modèle de page custom</p>
+								<div class="card__content">
+									<p>Développement du nouveau site web de l’agence avec wordpress. Gestion du back office, utilisation d’ACF et modèle de page custom</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--  bac + 3 -->
-				<div class="timeline__group">
-					<span class="timeline__year time" aria-hidden="true">2020-2021</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
-								<h3 class="card__title r-title">bac+ 3 - Epsi Lyon</h3>
-							</header>
-							<div class="card__content">
-								<p>Concepteur et développeur d’applications, titre RNCP de nv 6</p>
+					<!--  bac + 3 -->
+					<div class="timeline__group">
+						<span class="timeline__year time" aria-hidden="true">2020-2021</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
+									<h3 class="card__title r-title">bac+ 3 - Epsi Lyon</h3>
+								</header>
+								<div class="card__content">
+									<p>Concepteur et développeur d’applications, titre RNCP de nv 6</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--  bts sio -->
-				<div class="timeline__group">
-					<span class="timeline__year time" aria-hidden="true">2018-2020</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
+					<!--  bts sio -->
+					<div class="timeline__group">
+						<span class="timeline__year time" aria-hidden="true">2018-2020</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
 
-								<h3 class="card__title r-title">BTS SIO - Lycéé Lamartine Mâcon</h3>
-							</header>
+									<h3 class="card__title r-title">BTS SIO - Lycéé Lamartine Mâcon</h3>
+								</header>
 
-							<div class="card__content">
-								<p>Option Solutions Logicielles et Applications Métiers</p>
+								<div class="card__content">
+									<p>Option Solutions Logicielles et Applications Métiers</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- stage bts 2 eme année-->
-				<div class="timeline__group">
-					<span class="timeline__year time" aria-hidden="true">2020</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
-								<time class="time" datetime="2021">
-									<span class="time__month">Mars-avril</span>
-								</time>
-								<h3 class="card__title r-title">MJC héritant Mâcon- Stage 2ème année BTS SIO</h3>
-							</header>
+					<!-- stage bts 2 eme année-->
+					<div class="timeline__group">
+						<span class="timeline__year time" aria-hidden="true">2020</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
+									<time class="time" datetime="2021">
+										<span class="time__month">Mars-avril</span>
+									</time>
+									<h3 class="card__title r-title">MJC héritant Mâcon- Stage 2ème année BTS SIO</h3>
+								</header>
 
-							<div class="card__content">
-								<p>Reprise d’un site web avec wordpress</p>
+								<div class="card__content">
+									<p>Reprise d’un site web avec wordpress</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- stage bts 1 eme année-->
-				<div class="timeline__group">
+					<!-- stage bts 1 eme année-->
+					<div class="timeline__group">
 
-					<span class="timeline__year time" aria-hidden="true">2019</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
-								<time class="time" datetime="2021">
-									<span class="time__month">Mai-juillet</span>
-								</time>
-								<h3 class="card__title r-title">Qualup SAS Lugny -Stage 1ère année BTS SIO</h3>
-							</header>
+						<span class="timeline__year time" aria-hidden="true">2019</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
+									<time class="time" datetime="2021">
+										<span class="time__month">Mai-juillet</span>
+									</time>
+									<h3 class="card__title r-title">Qualup SAS Lugny -Stage 1ère année BTS SIO</h3>
+								</header>
 
-							<div class="card__content">
-								<p>Programmation python sur raspberry pi 3. </p>
+								<div class="card__content">
+									<p>Programmation python sur raspberry pi 3. </p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--  bac pro  -->
-				<div class="timeline__group">
-					<span class="timeline__year time" aria-hidden="true">2015-2018</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
+					<!--  bac pro  -->
+					<div class="timeline__group">
+						<span class="timeline__year time" aria-hidden="true">2015-2018</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
 
-								<h3 class="card__title r-title">Bac Pro SEN - LPP St Joseph Bourg-en-bresse</h3>
-							</header>
+									<h3 class="card__title r-title">Bac Pro SEN - LPP St Joseph Bourg-en-bresse</h3>
+								</header>
 
-							<div class="card__content">
-								<p>Option Audio Visuel et Multimédia</p>
+								<div class="card__content">
+									<p>Option Audio Visuel et Multimédia</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- Madagascar-->
-				<div class="timeline__group">
+					<!-- Madagascar-->
+					<div class="timeline__group">
 
-					<span class="timeline__year time" aria-hidden="true">2018</span>
-					<div class="timeline__cards">
-						<div class="timeline__card card">
-							<header class="card__header">
-								<time class="time" datetime="2021">
-									<span class="time__month">12-26 octobre</span>
-								</time>
-								<h3 class="card__title r-title">Association ECD 01 - Mission humanitaire à Madagascar</h3>
-							</header>
+						<span class="timeline__year time" aria-hidden="true">2018</span>
+						<div class="timeline__cards">
+							<div class="timeline__card card">
+								<header class="card__header">
+									<time class="time" datetime="2021">
+										<span class="time__month">12-26 octobre</span>
+									</time>
+									<h3 class="card__title r-title">Association ECD 01 - Mission humanitaire à Madagascar</h3>
+								</header>
 
-							<div class="card__content">
-								<p>Installations de plusieurs salles informatiques dans des écoles.. </p>
+								<div class="card__content">
+									<p>Installations de plusieurs salles informatiques dans des écoles.. </p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
 
-	<!-- section 2-->
-	<div class="container-fluid">
-		<div class="div2" id="realisations">
+<!-- section 2-->
+<div class="div2" id="realisations">
+		<div class="container-fluid">
+		
 			<h1>Mes Réalisations - Projets</h1>
 
 
@@ -367,3 +373,7 @@ $apropos = get_field("apropos");
 			</div>
 		</div>
 	</div>
+
+</main>
+
+	
