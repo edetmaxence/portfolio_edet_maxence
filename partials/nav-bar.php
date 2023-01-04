@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">EDET Maxence</a>
+    <a class="navbar-brand" href="">   Portfolio - EDET Maxence</a>
     
     
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
