@@ -1,3 +1,6 @@
+:root{
+  --main-color:#9D891F;
+}
 @font-face {
   font-family : "Akkurat-light";
   src: url("../fonts/Akkurat_woff/Akkurat-Light-Regular.otf") format("opentype");
@@ -39,13 +42,6 @@
 }
 
 html,
-body {
-  margin: 0 !important;
-  
-  font-family: "Akkurat-light"; 
-  
-}
-
 main {
   font-family: "Akkurat-light" !important; 
 }
@@ -515,7 +511,7 @@ SETTINGS
 body{
   font-family: "Akkurat-light";
   color: #f0f0f0;
-  background-color: rgba(40, 44, 51, 0.92);
+  background-color: rgba(40, 44, 51, 0.92);;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -567,13 +563,23 @@ p:last-child{
 }
 
 
+.position_center{
+   margin-top:10rem;
+}
+.position_center p{
+  color :var(--main-color);
+}
+
+ 
+	
+
 
 .frame{
   display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-padding: 44px;
+margin: 1rem;
 gap: 10px;
 
 width: 796px;
@@ -593,4 +599,13 @@ font-size: 41px;
 line-height: 50px;
 
 color: #FFFFFF;
+}
+
+.circle_img{
+  width:200px;
+	height:300px;
+	border-radius:100px;
+  margin: 1rem;
+
+
 }

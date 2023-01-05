@@ -24,34 +24,56 @@ $apropos = get_field("apropos");
 
 
 
+<main>
 
-	<div class="container">
+
+<div class="container">
 
 
-		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="text-center mt-5">
-						<div class="frame">
+	<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner ">
+			<div class="carousel-item active">
+				<div class="text-center  position_center">
+					<h2 class="display-1">Maxence EDET</h2>
+					<p class="display-5">Création de site web et de e-commerce</p>
+				</div>
 
+			</div>
+			<div class="carousel-item ">
+				<!-- présentation -->
+				<div class="text-center  position_center">
+
+					<div class="row ">
+						<div class="col-6 frame ">
 							<p>Jeune pationné d’informatique et de déveleppement web.
 								jeune entrepreneur n’hesité pas a ma contacter pour vos site internet.</p>
 						</div>
-
+						<div class="col-2 ">
+							<img class="circle_img" src="https://picsum.photos/300" alt="">
+						</div>
 					</div>
-
-				</div>
-				<div class="carousel-item">
-					<h2>Maxence EDET</h2>
-					<p>Creation de site web et de e-commerce</p>
 				</div>
 			</div>
 
 		</div>
+
 	</div>
 
 
+
+
+
+
+
+
+
+
+
+
 </div>
+
+</main>
+
 
 
 
