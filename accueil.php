@@ -24,40 +24,96 @@ $apropos = get_field("apropos");
 
 
 
-<main>
-
-
-<div class="container">
-
-
-	<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner ">
-			<div class="carousel-item active">
-				<div class="text-center  position_center">
-					<h2 class="display-1">Maxence EDET</h2>
-					<p class="display-5">Création de site web et de e-commerce</p>
-				</div>
-
+<section id="section_bandeau">
+	<div class="container border">
+		<div id="carouselExampleIndicators" class="carousel slide">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
-			<div class="carousel-item ">
-				<!-- présentation -->
-				<div class="text-center  position_center">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="text-center">
+						<h2 class="display-1">Maxence EDET</h2>
+						<p class="display-5 color_gold">Création de site web et de e-commerce</p>
 
-					<div class="row ">
-						<div class="col-6 frame ">
-							<p>Jeune pationné d’informatique et de déveleppement web.
-								jeune entrepreneur n’hesité pas a ma contacter pour vos site internet.</p>
-						</div>
-						<div class="col-2 ">
-							<img class="circle_img" src="https://picsum.photos/300" alt="">
+					</div>
+
+				</div>
+				<!-- <div class="carousel-item ">
+					<div class="d-flex align-items-center p-5">
+						<div class="row ">
+							<div class="col-6 frame ">
+								<p>Jeune pationné d’informatique et de déveleppement web.
+									jeune entrepreneur n’hesité pas a ma contacter pour vos site internet.</p>
+							</div>
+							<div class="col-2 ">
+								<img class="circle_img" src="https://picsum.photos/300" alt="">
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="carousel-item">
+					<div class="row">
+						<div class="col-4">
+							<div class=e40_74>
+								<div class="e38_45"></div>
+								<div class=e63_49><span class="color_gold display-6">Site vitrine Standard</span>
+									<div class=cont_txt>
+										<span class="row">+ Développer sous WORPRESS</span>
+										<span class="row">+ Site responsive</span>
+										<span class="row">+ mise en ligne du site</span>
+										<span class="row">+ formation utilisation du site</span>
+										<span class="row">+ interface administrateur Wordpress</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class=e40_74>
+								<div class="e38_45"></div>
+								<div class=e63_49><span class="color_gold display-6">Site vitrine Standard</span>
+									<div class=cont_txt>
+										<span class="row">+ Développer sous WORPRESS</span>
+										<span class="row">+ Site responsive</span>
+										<span class="row">+ mise en ligne du site</span>
+										<span class="row">+ formation utilisation du site</span>
+										<span class="row">+ interface administrateur Wordpress</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class=e40_74>
+								<div class="e38_45"></div>
+								<div class=e63_49><span class="color_gold display-6">Site vitrine Standard</span>
+									<div class=cont_txt>
+										<span class="row">+ Développer sous WORPRESS</span>
+										<span class="row">+ Site responsive</span>
+										<span class="row">+ mise en ligne du site</span>
+										<span class="row">+ formation utilisation du site</span>
+										<span class="row">+ interface administrateur Wordpress</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div> -->
+
 			</div>
-
 		</div>
-
 	</div>
+</section>
+
+<section id="service">
+	<div class="row">
+		<div class="p-5">
+			<h2 class="display-5 ">Domaine d'expetise</h2>
+		</div>
+	</div>
+</section>
 
 
 
@@ -70,9 +126,13 @@ $apropos = get_field("apropos");
 
 
 
-</div>
 
-</main>
+
+
+
+
+
+
 
 
 
