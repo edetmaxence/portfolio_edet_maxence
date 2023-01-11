@@ -1,5 +1,8 @@
 :root{
   --main-color:#9D891F;
+  --bg-body :rgba(40, 44, 51, 0.92);
+  --bg-frame: #282C33;
+  --color-white:rgba(255, 255, 255, 1);
 }
 @font-face {
   font-family : "Akkurat-light";
@@ -55,8 +58,8 @@ section{
 
 body{
   font-family: "Akkurat-light";
-  color: #f0f0f0;
-  background-color: rgba(40, 44, 51, 0.92);;
+  color: var(--color-white);
+  background-color: var(--bg-body);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -238,7 +241,7 @@ padding-top: 0.5rem;
 }
 
 .front_projet{
-  color:#F9F9F9;
+  color:var(--color-white);
   padding-left:1rem;
   font-size: 1ch;
 }
@@ -544,88 +547,60 @@ p:last-child{
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 400px;
+  height: 500px;
 }
 	
 
 
 .frame{
-margin: 1rem;
+
 gap: 10px;
-
 width: 796px;
-height: 288px;
-
-background: #282C33;
+height: auto;
+background:var(--bg-frame);
 border-radius: 28px;
 }
 .frame p{
-  width: 708px;
-height: 200px;
 font-style: normal;
 font-weight: 400;
 font-size: 41px;
 line-height: 50px;
-color: #FFFFFF;
+color: var(--color-white);
 }
 
 .circle_img{
   width: 400px;
-  height: 200px;
+  height: 300px;
   border-radius: 100px;
-  margin: 3rem;
 
 
 }
 
 
 
-.e40_74 { 
-	width:311px;
-	height:395px;
-	position:absolute;
-}
-.e38_45 { 
-	background-color:rgba(40.00000141561031, 44.000001177191734, 51.00000075995922, 1);
+
+
+.bg_frame_prestation { 
+	background:var(--bg-frame);
 	width:317px;
 	height:395px;
-	position:absolute;
-	left:0px;
-	top:0px;
-	border-top-left-radius:28px;
-	border-top-right-radius:28px;
-	border-bottom-left-radius:28px;
-	border-bottom-right-radius:28px;
-}
-.e63_49 { 
-	width:272px;
-	height:365px;
-	position:absolute;
-	left:23px;
-	top:11px;
-}
-.e40_63 { 
-	color:rgba(157.25000202655792, 137.0171821117401, 30.794793963432312, 1);
-	width:165px;
-	height:73px;
-	position:absolute;
-	left:53.5px;
-	top:30.5px;
-	font-family:Inter;
-	text-align:center;
-	font-size:31px;
-	letter-spacing:0;
+	border-radius:28px;	
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  margin: 1rem;
 }
 
+
+
 .cont_txt { 
-	color:rgba(255, 255, 255, 1);
-	width:266px;
-	height:18px;
-	position:absolute;
-	left:0px;
-	top:116px;
+	color:var(--color-white);
 	text-align:center;
 	font-size:15px;
 	letter-spacing:0;
+  position: absolute;
+  left:4rem;
+  top:6rem;
+  padding-top: 5rem;
 }
 
