@@ -41,9 +41,10 @@ function theme_enqueue_styles() {
     wp_enqueue_style('regular.min.css', get_stylesheet_directory_uri() . '/fonts/fontawesome-free-5.15.3-web/css/regular.min.css', array());
     wp_enqueue_style('solid.min.css', get_stylesheet_directory_uri() . '/fonts/fontawesome-free-5.15.3-web/css/solid.min.css', array());
 
-
+ wp_enqueue_script('customjs', get_stylesheet_directory_uri() . '/js/custom.js', array());
     wp_enqueue_style('customcss', get_stylesheet_directory_uri() . '/css/custom.css', array());
-    wp_enqueue_script('customjs', get_stylesheet_directory_uri() . '/js/custom.js', array());
+    wp_enqueue_style('mobile_style', get_stylesheet_directory_uri() . '/css/mobile_Style.css', array());
+   
   
 	
 
@@ -70,8 +71,7 @@ function register_my_menus()
 
 //module Réalisation
 
-function wpm_custom_post_type()
-{
+function wpm_custom_post_type(){
     $RealisationLabels = array(
         'name' => _x('Réalisation', 'Post Type General Name'),
         'singular_name' => _x('Réalisation', 'Post Type Singular Name'),
@@ -133,10 +133,9 @@ function wpm_custom_post_type()
     register_taxonomy('categoriesrealisation', 'realisation', $args_cat_realisation);
    
 }
-    add_action('init', 'wpm_custom_post_type');
+add_action('init', 'wpm_custom_post_type');
 
-    function istop_classes($id)
-{
+function istop_classes($id){
 
     $terms = wp_get_post_terms(get_the_id(), 'categoriesrealisation');
     foreach ($terms as $term) {
