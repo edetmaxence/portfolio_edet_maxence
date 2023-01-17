@@ -1,0 +1,36 @@
+@media screen and (max-width: 680px) {
+
+    body,
+    section{
+        height: auto;
+        width: auto;
+        position: relative;
+    }
+    .circle_img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 100%;
+        margin: 1rem;
+
+    }
+
+    .frame {
+        width: auto;
+        height: auto;
+        background: var(--bg-frame);
+        border-radius: 28px;
+        padding: 1rem;
+        margin:2rem;
+
+    }
+
+    .frame p {
+        font-style: normal;
+        font-size: 30px;
+        color: var(--color-white);
+    }
+    
+
+}
