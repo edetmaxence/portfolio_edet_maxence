@@ -27,7 +27,8 @@ function theme_enqueue_styles() {
     }
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
     wp_enqueue_style('boostrapcss', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
-  
+    wp_enqueue_style('boostrap_icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
+ 
    
     wp_enqueue_script('jquery','https://code.jquery.com/jquery-1.12.0.min.js', array());
     wp_enqueue_script('ajax', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array());
@@ -131,6 +132,42 @@ function wpm_custom_post_type(){
     );
 
     register_taxonomy('categoriesrealisation', 'realisation', $args_cat_realisation);
+
+
+
+    $PrestationLabels = array(
+        'name' => _x('Préstation', 'Post Type General Name'),
+        'singular_name' => _x('Préstation', 'Post Type Singular Name'),
+        'menu_name' => __('Préstation'),
+        'all_items' => __('Toutes les Préstations'),
+        'view_item' => __('Voir les Préstation'),
+        'add_new_item' => __('Ajouter une nouvelle Préstation'),
+        'add_new' => __('Ajouter'),
+        'edit_item' => __('Editer la Préstation'),
+        'update_item' => __('Modifier la Préstation'),
+        'search_items' => __('Rechercher une Préstation'),
+        'not_found' => __('Non trouvée'),
+        'not_found_in_trash' => __('Non trouvée dans la corbeille'),
+    );
+
+    $PrestationArgs = array(
+        'label' => __('Prestation'),
+        'description' => __('Tous sur Prestation'),
+        'labels' => $PrestationLabels,
+        'menu_icon'      => 'dashicons-megaphone',
+        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields',),
+        'show_in_rest' => true,
+        'hierarchical' => false,
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'prestation'),
+
+    );
+
+    register_post_type('prestation', $PrestationArgs);
+
+
+
    
 }
 add_action('init', 'wpm_custom_post_type');
@@ -146,5 +183,24 @@ function istop_classes($id){
     foreach ($catrealisations as $category) {
         echo $category->slug. ' ';
     }
+}
+
+function realisationAll(){
+    $realisation_args = array(
+        'post_type' => 'realisation',
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'ASC',
+    );
+    return new WP_Query($realisation_args);
+}
+function prestationAll(){
+    $prestation_args = array(
+        'post_type' => 'prestation',
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'ASC',
+    );
+    return new WP_Query($prestation_args);
 }
 

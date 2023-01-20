@@ -1,15 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="">   Portfolio - EDET Maxence</a>
     
     
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
        
-        <li class="nav-item">
+        <li class="nav-item ">
         <a class="btn btnclick" href="https://edetmaxence.fr/wp-content/uploads/2022/03/CV-EDET-Maxence.pdf" target="_blank"  >  Télécharger CV </a>
         </li>
         <li class="nav-item">
-          <a class="btn btnclick" href="#realisations">Réalisations</a>
+          <a class="btn btnclick" href="#realisations">Réalisations </a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btnclick" href="#prestations">prestations</a>
         </li>
       
         

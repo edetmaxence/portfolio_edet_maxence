@@ -53,6 +53,7 @@ section{
   width: auto;
   height: 100%;
   position: relative;
+ padding-top: 3rem;
  
   
 }
@@ -550,12 +551,11 @@ p:last-child{
 
 
 .frame{
-
-
-width: auto;
+width: 800px;
 height: auto;
 background:var(--bg-frame);
 border-radius: 28px;
+text-align: center;
 
 }
 .frame p{
@@ -565,10 +565,11 @@ font-size: 41px;
 line-height: 50px;
 color: var(--color-white);
 }
+
 .bg_frame_prestation { 
 	background:var(--bg-frame);
 	width:317px;
-	height:395px;
+	height:auto;
 	border-radius:28px;	
   position: relative;
   text-align: center;

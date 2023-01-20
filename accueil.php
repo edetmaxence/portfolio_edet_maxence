@@ -5,13 +5,9 @@
 
 get_header();
 
-$realisation_args = array(
-	'post_type' => 'realisation',
-	'post_status' => 'publish',
-	'orderby' => 'date',
-	'order' => 'ASC',
-);
-$realisation_all = new WP_Query($realisation_args);
+
+$realisation_all = realisationAll();
+$prestation_all = prestationAll();
 
 
 
@@ -24,9 +20,10 @@ $apropos = get_field("apropos");
 
 
 
-<section id="section_bandeau" class="d-none d-lg-block d-md-block">
-	<div class="container-fluid ">
-		<div class="row ">
+<section id="section_bandeau">
+
+	<div class="container-fluid d-none d-lg-flex d-md-flex ">
+		<div class="row">
 			<div class="position-absolute top-50 start-50 translate-middle">
 				<div id="carouselExampleIndicators" class="carousel slide">
 					<div class="carousel-indicators">
@@ -44,28 +41,31 @@ $apropos = get_field("apropos");
 						</div>
 						<!--Item 2 description + photo de beau gosse-->
 						<div class="carousel-item">
-							<div class="justify-content-center">
-								<div class="frame text-center ">
-									<p class="mt-5">Jeune pationné d’informatique et de déveleppement web.
-										jeune entrepreneur n’hesité d-lg-flex justify-content-centerpas a ma contacter pour vos site internet.</p>
+							<div class="justify-content-center d-flex ">
+
+								<div class="frame">
+									<p>Jeune pationné d’informatique et de déveleppement web.
+										jeune entrepreneur n’hesiter pas a ma contacter pour vos site internet.</p>
 								</div>
+
 								<div>
 									<img class="circle_img" src="https://picsum.photos/300" alt="photo_beau_gosse">
 								</div>
+
+
 							</div>
+
 						</div>
-
-
 					</div>
+
+
 				</div>
 			</div>
 		</div>
 	</div>
+	<!--Responsive design-->
 
-</section>
-
-<section id="section_bandeau" class="d-sm-block d-lg-none d-md-none">
-	<div class="container">
+	<div class="container d-sm-flex d-lg-none d-md-none">
 		<div class="row text-center d-flex flex-column mb-3">
 
 			<!--Item 1 logo + prenom/nom + metier-->
@@ -84,58 +84,62 @@ $apropos = get_field("apropos");
 			</div>
 		</div>
 	</div>
+
+	</div>
+
 </section>
+
+<?php
+
+// if ($prestation_all->have_posts()) : foreach($prestation_all as $key => $posts ) : $prestation_all->the_post();
+
+// 					$titre= the_title();
+// 					echo ($titre);
+
+// endforeach;
+// endif;
+
+?>
+
 
 
 
 
 
 <section id="prestations">
-
-	<div class="d-flex  flex-row justify-content-center">
-		<div class="bg_frame_prestation">
-			<span class="color_gold display-6">Conseil Worpdress</span>
-			<div class=cont_txt>
-				<span class="row">+ B to C 30€/h, la première demi heure gratuite</span>
-				<span class="row">+ Aide au particulier à la crétion de leur site web Wordpress</span>
-			</div>
-
+	<div class="container-fluid p-5 ">
+		<div class="text-center pb-5">
+			<span class="color_gold display-4">Préstations</span>
 		</div>
-		<div class="bg_frame_prestation">
-			<span class="color_gold display-6">Site vitrine Standard</span>
-			<div class=cont_txt>
+		<div class="d-lg-flex justify-content-center">
+<?php
+				$count_post = 0;
+				if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
+						$titrePresta = get_the_title();
+						$contentPresta = get_the_content();
+				?>
+			<div class="card text-center mb-2 bg_frame_prestation">
+				
+						<div class="card-body ">
+							<h2 class="card-title color_gold  "><?= $titrePresta;?></h2>
+							<p class="card-text pt-4 text-start">
+								<?= $contentPresta; ?>
+							</p>
 
-				<span class="row">+ Développer sous WORPRESS</span>
-				<span class="row">+ Site responsive</span>
-				<span class="row">+ mise en ligne du site</span>
-				<span class="row">+ formation utilisation du site</span>
-				<span class="row">+ interface administrateur Wordpress</span>
+						</div>
+				
 			</div>
-
+<?php endwhile;
+				endif;
+				$count_post++; ?>
 		</div>
-		<div class="bg_frame_prestation">
-			<span class="color_gold display-6">Site vitrine avancé</span>
-			<div class=cont_txt>
-
-				<span class="row">+ Développer sous Symfony</span>
-				<span class="row">+ Site responsive</span>
-				<span class="row">+ mise en ligne du site</span>
-				<span class="row">+ formation utilisation du site</span>
-				<span class="row">+ Sécurité du sitee</span>
-			</div>
-
-		</div>
-
-
 	</div>
-
-
 </section>
 
 
 <section id="realisations">
 
-	<div class="container-fluid">
+	<div class="container-fluid pt-5">
 		<div class="row text-center">
 			<span class="color_gold display-4">Mes Réalisations - Projets</span>
 		</div>
