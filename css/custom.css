@@ -3,6 +3,7 @@
   --bg-body :rgba(40, 44, 51, 0.92);
   --bg-frame: #282C33;
   --color-white:rgba(255, 255, 255, 1);
+ 
 }
 @font-face {
   font-family : "Akkurat-light";
@@ -69,14 +70,6 @@ body{
   position: relative;
  
 }
-
-
-
-
-
-
-
-
 
 
 ol {
@@ -598,3 +591,24 @@ color: var(--color-white);
   padding-top: 5rem;
 }
 
+/** nav bar css*/
+nav{
+  background-color: var(--bg-frame);
+  color: var(--main-color);
+}
+nav img{
+  height:100px;
+  width:100px;
+}
+ a{
+  text-decoration: none;
+  text-transform: none;
+
+
+  
+}
+a:hover{
+  text-decoration: none;
+  color: var(--main-color);
+  
+}

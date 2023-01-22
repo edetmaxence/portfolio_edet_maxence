@@ -9,19 +9,17 @@ get_header();
 $realisation_all = realisationAll();
 $prestation_all = prestationAll();
 
-
-
 $titre = get_field("titre");
+$Soustitre = get_field("Soustitre");
 $apropos = get_field("apropos");
+$contacts = get_field("contacts");
+
 
 
 ?>
 
 
-
-
 <section id="section_bandeau">
-
 	<div class="container-fluid d-none d-lg-flex d-md-flex ">
 		<div class="row">
 			<div class="position-absolute top-50 start-50 translate-middle">
@@ -34,9 +32,25 @@ $apropos = get_field("apropos");
 						<!--Item 1 logo + prenom/nom + metier-->
 						<div class="carousel-item active">
 							<div class="text-center">
-								<h2 class="display-1">Maxence EDET</h2>
-								<p class="display-5 color_gold">Création de site web et de e-commerce</p>
+								<h2 class="display-1"><?= $titre; ?></h2>
+								<span class="display-5 color_gold"> <?= $Soustitre; ?></span>
 
+							</div>
+							<div class="container" style="padding-top: 9rem;">
+								<div class="row text-center display-5 ">
+									<div class="col-lg-6">
+										<a href="tel: <?= $contacts["telephone"]; ?>">
+										<i class="bi bi-telephone-outbound"></i>
+											<?= $contacts["telephone"]; ?>
+										</a>
+									</div>
+									<div class="col-lg-6">
+										<a href="mailto: <?= $contacts["email"]; ?>">
+											<i class="bi bi-envelope-at"></i>
+											<?= $contacts["email"]; ?>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Item 2 description + photo de beau gosse-->
@@ -44,12 +58,11 @@ $apropos = get_field("apropos");
 							<div class="justify-content-center d-flex ">
 
 								<div class="frame">
-									<p>Jeune pationné d’informatique et de déveleppement web.
-										jeune entrepreneur n’hesiter pas a ma contacter pour vos site internet.</p>
+									<p><?= $apropos; ?></p>
 								</div>
 
 								<div>
-									<img class="circle_img" src="https://picsum.photos/300" alt="photo_beau_gosse">
+									<img class="circle_img" src=" <?= get_the_post_thumbnail(); ?> ">
 								</div>
 
 
@@ -89,49 +102,33 @@ $apropos = get_field("apropos");
 
 </section>
 
-<?php
-
-// if ($prestation_all->have_posts()) : foreach($prestation_all as $key => $posts ) : $prestation_all->the_post();
-
-// 					$titre= the_title();
-// 					echo ($titre);
-
-// endforeach;
-// endif;
-
-?>
-
-
-
-
-
-
 <section id="prestations">
 	<div class="container-fluid p-5 ">
 		<div class="text-center pb-5">
 			<span class="color_gold display-4">Préstations</span>
 		</div>
 		<div class="d-lg-flex justify-content-center">
-<?php
-				$count_post = 0;
-				if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
-						$titrePresta = get_the_title();
-						$contentPresta = get_the_content();
-				?>
-			<div class="card text-center mb-2 bg_frame_prestation">
-				
+			<?php
+			$count_post = 0;
+			if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
+					$titrePresta = get_the_title();
+					$contentPresta = get_the_content();
+			?>
+					<div class="card text-center mb-2 bg_frame_prestation">
+
 						<div class="card-body ">
-							<h2 class="card-title color_gold  "><?= $titrePresta;?></h2>
+							<h2 class="card-title color_gold  "><?= $titrePresta; ?></h2>
 							<p class="card-text pt-4 text-start">
 								<?= $contentPresta; ?>
 							</p>
 
 						</div>
-				
-			</div>
-<?php endwhile;
-				endif;
-				$count_post++; ?>
+
+					</div>
+			<?php endwhile;
+			endif;
+			$count_post++;
+			?>
 		</div>
 	</div>
 </section>

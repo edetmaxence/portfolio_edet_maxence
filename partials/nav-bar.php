@@ -1,18 +1,29 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">   Portfolio - EDET Maxence</a>
+  <img src="http://localhost:8888/portfolio_EDET/wp-content/uploads/2023/01/cropped-logo_EI_EDET.png"  alt="logo">
+ 
     
     
-      <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+    
+      <ul class="navbar-nav  me-auto mb-2 ml-lg-3">
        
-        <li class="nav-item ">
-        <a class="btn btnclick" href="https://edetmaxence.fr/wp-content/uploads/2022/03/CV-EDET-Maxence.pdf" target="_blank"  >  Télécharger CV </a>
+     
+        <li class="nav-item">
+          <div class="row display-6"><a href="#">  EI - Maxence EDET</a></div>
+          <div class="row"> <span>Développeur web</span> </div>
+        
         </li>
         <li class="nav-item">
-          <a class="btn btnclick" href="#realisations">Réalisations </a>
+          <a class="" href="#realisations">Réalisations </a>
         </li>
         <li class="nav-item">
-          <a class="btn btnclick" href="#prestations">prestations</a>
+          <a class="" href="#prestations">Préstations</a>
+        </li>
+        <li class="nav-item">
+          <a class="" href="#contact">Contact</a>
         </li>
       
         
