@@ -98,7 +98,7 @@ get_header();
 		</section>
 		<section id="prestations">
 			<div class="container">
-				<div class="text-center p-5">
+				<div class="text-center">
 					<span class="color_gold display-4">Préstations</span>
 				</div>
 				<div class="d-lg-flex justify-content-center">
@@ -128,7 +128,7 @@ get_header();
 		</section>
 		<section id="realisations">
 
-			<div class="container-fluid pt-5">
+		
 				<div class="row text-center">
 					<span class="color_gold display-4">Mes Réalisations - Projets</span>
 				</div>
@@ -209,7 +209,7 @@ get_header();
 									<?php endif; ?>
 
 									<div class="front_projet">
-										<div class="pos_titre"> <?= $title; ?></div>
+										<div class="pos_titre"> <?= $title; ?></div> 
 										<div class="pos_mission"> <?= $mission; ?></div>
 
 									</div>
@@ -235,7 +235,7 @@ get_header();
 
 					</div>
 				</div>
-			</div>
+			
 		</section>
 
 	</div>
