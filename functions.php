@@ -82,13 +82,14 @@ function register_my_menus()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu'),
+            'footer_menu' => __('Footer Menu'),
 
 
         )
     );
 }
 
+add_action('init','register_my_menus');
 //module Réalisation
 
 function wpm_custom_post_type()
@@ -175,7 +176,7 @@ function wpm_custom_post_type()
         'description' => __('Tous sur Prestation'),
         'labels' => $PrestationLabels,
         'menu_icon'      => 'dashicons-megaphone',
-        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields',),
+        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields',),
         'show_in_rest' => true,
         'hierarchical' => false,
         'public' => true,
@@ -206,24 +207,24 @@ function istop_classes($id)
 function theme_customizer_function($wp_customize)
 {
 
-    $wp_customize->add_panel('navbar', array(
-        'title' => 'navbar',
+    $wp_customize->add_panel('customThème', array(
+        'title' => 'customThème',
         'priority' => 10,
         'capability' => 'edit_theme_options',
     ));
-    $wp_customize->add_section('landing_home', array(
-        'title' => 'Home Section',
-        'panel' => 'navbar',
+    $wp_customize->add_section('landing_header', array(
+        'title' => 'NavBar',
+        'panel' => 'customThème',
 
     ));
-
+    
     $wp_customize->add_setting('landing_name', array(
         'default' => __("Nom de l'entreprise"),
 
     ));
     $wp_customize->add_control('landing_name', array(
         'label' => "Nom de l'entreprise",
-        'section' => 'landing_home',
+        'section' => 'landing_header',
         'priority' => 1,
 
     ));
@@ -233,7 +234,7 @@ function theme_customizer_function($wp_customize)
     ));
     $wp_customize->add_control('landing_activity', array(
         'label' => "Activité de l'entreprise",
-        'section' => 'landing_home',
+        'section' => 'landing_header',
         'priority' => 1,
 
     ));
@@ -243,9 +244,58 @@ function theme_customizer_function($wp_customize)
     ) );
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'logo', array(
         'label'            => 'Logo',
-        'section'          => 'landing_home',
+        'section'          => 'landing_header',
         
     )));
+
+    $wp_customize->add_section('landing_footer', array(
+        'title' => __('Footer','themename'),
+        'panel' => 'customThème',
+        'priority' => 105,
+
+    ));
+    $wp_customize->add_setting('copyright', array(
+        'default' => __("© Copyright 2023"),
+
+    ));
+    $wp_customize->add_control('copyright', array(
+        'label' => "Copyright",
+        'section' => 'landing_footer',
+        'priority' => 105,
+
+    ));
+    $wp_customize->add_setting('menu', array(
+        'title' => __( 'Menus' ),
+        'priority' => 160,
+
+    ));
+    $wp_customize->add_control('menu', array(
+        'label' => "Menu Footer",
+        'section' => 'landing_footer',
+        'priority' => 160,
+
+    ));
+    $wp_customize->add_section('landing_contact', array(
+        'title' => __('Contact','themename'),
+        'panel' => 'customThème',
+        'priority' => 105,
+
+    ));
+    $wp_customize->add_setting('telephone');
+    $wp_customize->add_control('telephone', array(
+        'label' => "telephone",
+        'section' => 'landing_contact',
+        'priority' =>1,
+
+    ));
+    $wp_customize->add_setting('email');
+    $wp_customize->add_control('email', array(
+        'label' => "email",
+        'section' => 'landing_contact',
+        'priority' =>1,
+
+    ));
+  
 }
 add_action('customize_register', 'theme_customizer_function');
 

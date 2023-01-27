@@ -5,27 +5,27 @@
 
 
 
-
-
-
 ?>
+<header>
 
-<nav class="nav navbar navbar-dark  fixed-top">
-  <div class="container-fluid">
+
+
+  <nav class="nav navbar navbar-dark">
+<div class="container-fluid">
     <a class="navbar-brand" href="#">
       <div class="row">
-      <div class="col-lg-3 w-auto h-auto"> 
-      <?php if( !empty( get_theme_mod('logo') ) ): ?>
-        <img src="<?=  get_theme_mod('logo')?>" alt="logo" />
-      <?php endif; ?>
-    </div>
-      <div class="col color_gold">
-        <div class="row"><span class="fs-2"><?=  get_theme_mod('landing_name')?> </span></div>
-        <div class="row"><span class="fs-4"><?=  get_theme_mod('landing_activity')?></span></div>
-        
+        <div class="col-lg-3 w-auto h-auto">
+          <?php if (!empty(get_theme_mod('logo'))) : ?>
+            <img src="<?= get_theme_mod('logo') ?>" alt="logo" />
+          <?php endif; ?>
+        </div>
+        <div class="col-2 col-lg color_gold">
+          <div class="row"><span class="fs-2"><?= get_theme_mod('landing_name') ?> </span></div>
+          <div class="row"><span class="fs-4"><?= get_theme_mod('landing_activity') ?></span></div>
+
+        </div>
       </div>
-    </div>
-    
+
     </a>
     <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
           </li>
 
           <li class="nav-item">
-            
+
           </li>
 
           <li class="nav-item dropdown">
@@ -57,19 +57,22 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item fs-4" href="https://www.linkedin.com/in/maxence-edet/">Linkedin <i class="bi bi-linkedin"></i></a>
-              
-            </li>
-           
+
+              </li>
 
               <li>
                 <hr class="dropdown-divider">
               </li>
-     
+
             </ul>
-          </li>
+            <a href="tel:  <?= get_theme_mod('telephone') ?>"> <?= get_theme_mod('telephone') ?></a>
+            <a href="mailto:<?= get_theme_mod('email') ?> "><?= get_theme_mod('email') ?></a>
+
         </ul>
-   
+
       </div>
     </div>
-  </div>
-</nav>
+</div>
+  </nav>
+
+</header>
