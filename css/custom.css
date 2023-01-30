@@ -56,7 +56,6 @@ body{
  
 }
 section{
-
   height: 100vh;
 }
 
@@ -202,7 +201,7 @@ font-size: 2ch;
 
 .carousel-inner {
  
-
+top:9rem;
   width: 100%;
   overflow: hidden;
   height: 500px;

@@ -83,6 +83,7 @@ function register_my_menus()
     register_nav_menus(
         array(
             'footer_menu' => __('Footer Menu'),
+            'main_menu' => __('Main Menu'),
 
 
         )
