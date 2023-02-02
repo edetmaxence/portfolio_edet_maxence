@@ -1,6 +1,7 @@
 
 
 jQuery(document).ready(function () {
+  
     var url_string = window.location.href;
     var url = new URL(url_string);
     var type = url.searchParams.get("type");
@@ -25,7 +26,7 @@ jQuery(document).ready(function () {
   
      
       if ($(this).attr('id') === 'filter-web') {
-  
+        console.log("filter web");
         $grid.isotope({ filter: '.web' });
       }
       if ($(this).attr('id') === 'filter-mobile') {

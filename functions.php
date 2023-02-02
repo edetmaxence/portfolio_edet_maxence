@@ -2,20 +2,20 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
-add_filter( 'rest_authentication_errors', function( $result ) {
+add_filter('rest_authentication_errors', function ($result) {
     // If a previous authentication check was applied,
     // pass that result along without modification.
-    if ( true === $result || is_wp_error( $result ) ) {
+    if (true === $result || is_wp_error($result)) {
         return $result;
     }
 
     // No authentication has been performed yet.
     // Return an error if user is not logged in.
-    if ( ! is_user_logged_in() ) {
+    if (!is_user_logged_in()) {
         return new WP_Error(
             'rest_not_logged_in',
-            __( 'You are not currently logged in.' ),
-            array( 'status' => 401 )
+            __('You are not currently logged in.'),
+            array('status' => 401)
         );
     }
 
@@ -51,24 +51,17 @@ function theme_enqueue_styles()
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
     wp_enqueue_style('boostrapcss', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
     wp_enqueue_style('boostrap_icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
-    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
 
-
-    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.12.0.min.js', array());
+ wp_enqueue_style('w3', 'https://www.w3schools.com/w3css/4/w3.css', array());
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.3.min.js', array());
     wp_enqueue_script('ajax', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array());
 
-    wp_enqueue_style('aos', 'https://unpkg.com/aos@next/dist/aos.css', array());
-    wp_enqueue_style('w3', 'https://www.w3schools.com/w3css/4/w3.css', array());
-    wp_enqueue_script('aosscript', 'https://unpkg.com/aos@next/dist/aos.js', array());
 
     wp_enqueue_script('isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array());
-    wp_enqueue_style('fontawesome.min.css', get_stylesheet_directory_uri() . '/fonts/fontawesome-free-6.1.2-web/css/all.min.css', array());
-    wp_enqueue_style('regular.min.css', get_stylesheet_directory_uri() . '/fonts/fontawesome-free-6.1.2-web/css/regular.min.css', array());
-    wp_enqueue_style('solid.min.css', get_stylesheet_directory_uri() . '/fonts/fontawesome-free-6.1.2-web/css/solid.min.css', array());
 
     wp_enqueue_script('customjs', get_stylesheet_directory_uri() . '/js/custom.js', array());
     wp_enqueue_style('customcss', get_stylesheet_directory_uri() . '/css/custom.css', array());
-    wp_enqueue_style('mobile_style', get_stylesheet_directory_uri() . '/css/mobile_Style.css', array());
+   
 }
 
 function add_child_theme_textdomain()
@@ -90,7 +83,7 @@ function register_my_menus()
     );
 }
 
-add_action('init','register_my_menus');
+add_action('init', 'register_my_menus');
 //module Réalisation
 
 function wpm_custom_post_type()
@@ -115,7 +108,7 @@ function wpm_custom_post_type()
         'description' => __('Tous sur realisation'),
         'labels' => $RealisationLabels,
         'menu_icon'      => 'dashicons-megaphone',
-        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
+        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields',),
         'show_in_rest' => true,
         'hierarchical' => false,
         'public' => true,
@@ -218,7 +211,7 @@ function theme_customizer_function($wp_customize)
         'panel' => 'customThème',
 
     ));
-    
+
     $wp_customize->add_setting('landing_name', array(
         'default' => __("Nom de l'entreprise"),
 
@@ -242,15 +235,15 @@ function theme_customizer_function($wp_customize)
     $wp_customize->add_setting('logo', array(
         'capability'        => 'edit_theme_options',
         'default'           => '',
-    ) );
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'logo', array(
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo', array(
         'label'            => 'Logo',
         'section'          => 'landing_header',
-        
+
     )));
 
     $wp_customize->add_section('landing_footer', array(
-        'title' => __('Footer','themename'),
+        'title' => __('Footer', 'themename'),
         'panel' => 'customThème',
         'priority' => 105,
 
@@ -266,7 +259,7 @@ function theme_customizer_function($wp_customize)
 
     ));
     $wp_customize->add_setting('menu', array(
-        'title' => __( 'Menus' ),
+        'title' => __('Menus'),
         'priority' => 160,
 
     ));
@@ -277,7 +270,7 @@ function theme_customizer_function($wp_customize)
 
     ));
     $wp_customize->add_section('landing_contact', array(
-        'title' => __('Contact','themename'),
+        'title' => __('Contact', 'themename'),
         'panel' => 'customThème',
         'priority' => 105,
 
@@ -286,17 +279,16 @@ function theme_customizer_function($wp_customize)
     $wp_customize->add_control('telephone', array(
         'label' => "telephone",
         'section' => 'landing_contact',
-        'priority' =>1,
+        'priority' => 1,
 
     ));
     $wp_customize->add_setting('email');
     $wp_customize->add_control('email', array(
         'label' => "email",
         'section' => 'landing_contact',
-        'priority' =>1,
+        'priority' => 1,
 
     ));
-  
 }
 add_action('customize_register', 'theme_customizer_function');
 

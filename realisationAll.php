@@ -1,14 +1,17 @@
-<?php 
-/**
- * Template Name: Réalisation
- */
+<?php
+
+/*
+Template Name: Page Realisation
+*/
+
+get_header();
 
 $realisation_all = realisationAll();
-get_header();
 
 ?>
 
-<section id="realisations">
+
+<div class="container-fluid">
 
 
     <div class="row text-center">
@@ -76,7 +79,7 @@ get_header();
 
             ?>
 
-                    <div class="grid-item  col-md-4 m-3
+                    <div class="grid-item col col-lg-4 col-md-4 m-3
 									<?php
                                     istop_classes(get_the_id());
                                     ?>" href="<?php the_permalink(); ?>
@@ -118,6 +121,7 @@ get_header();
         </div>
     </div>
 
-</section>
+</div>
+
 
 <?php get_footer() ?>

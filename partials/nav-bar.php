@@ -13,14 +13,12 @@ $headerMenu = array(
 )
 
 ?>
-<header>
-
 
 
   <nav class="nav navbar navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <div class="row">
+        <div class="row transform">
           <div class="col-lg-3 w-auto h-auto">
             <?php if (!empty(get_theme_mod('logo'))) : ?>
               <img src="<?= get_theme_mod('logo') ?>" alt="logo" />
@@ -79,4 +77,3 @@ $headerMenu = array(
     </div>
   </nav>
 
-</header>
