@@ -219,7 +219,7 @@ section {
 
 .carousel-inner {
 
-  top: 9rem;
+
   width: 100%;
   overflow: hidden;
   height: 500px;
@@ -350,7 +350,15 @@ ul {
   }
 
   
+  .frame {
+    width: auto;
+    height: auto;
+    background: var(--bg-frame);
+    border-radius: 28px;
+    padding: 1rem;
+    margin:2rem;
 
+}
   .frame p {
     font-style: normal;
     font-size: 1.9em;

@@ -12,6 +12,7 @@ $titre = get_field("titre");
 $Soustitre = get_field("Soustitre");
 $apropos = get_field("apropos");
 $contacts = get_field("contacts");
+$title_section_prestations = get_field("title_section_prestations");
 
 
 
@@ -60,21 +61,26 @@ $contacts = get_field("contacts");
 									<p><?= $apropos; ?></p>
 								</div>
 
-								<div>
-									<img class="circle_img" src="https://picsum.photos/300">
+								<div class="circle_img">
+									<img class="circle_img" src="">
+									<?= get_the_post_thumbnail();
+																	?>
+															
+
+									<?php //<img class="circle_img" src="https://picsum.photos/300"> 
+									?>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<?php // get_the_post_thumbnail();
-				?>
+
 			</div>
 		</div>
 		<div class="d-flex d-lg-none d-md-none">
 			<div class="row text-center">
-				<div class="col-6">
+				<div class="col-12">
 
 
 					<!--Item 1 logo + prenom/nom + metier-->
@@ -98,36 +104,37 @@ $contacts = get_field("contacts");
 
 </section>
 
-		<section id="prestations">
-			<div class="container">
-				<div class="text-center">
-					<span class="color_gold display-4">Préstations</span>
-				</div>
-				<div class=" row d-lg-flex d-md-flex justify-content-center">
-					<?php
-					$count_post = 0;
-					if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
-							$titrePresta = get_the_title();
-							$contentPresta = get_the_content();
-					?>
-							<div class="card text-center mb-2 bg_frame_prestation">
+<section id="prestations">
+	<div class="container-fluid">
+		<div class="text-center">
 
-								<div class="card-body ">
-									<h2 class="card-title color_gold  "><?= $titrePresta; ?></h2>
-									<p class="card-text pt-4 text-start">
-										<?= $contentPresta; ?>
-									</p>
+			<span class="color_gold display-4"><?= $title_section_prestations ?></span>
+		</div>
+		<div class="row pt-5 d-lg-flex d-md-flex justify-content-center">
+			<?php
+			$count_post = 0;
+			if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
+					$titrePresta = get_the_title();
+					$contentPresta = get_the_content();
+			?>
+					<div class="card text-center mb-2 bg_frame_prestation">
 
-								</div>
+						<div class="card-body ">
+							<h2 class="card-title color_gold  "><?= $titrePresta; ?></h2>
+							<p class="card-text pt-4 text-start">
+								<?= $contentPresta; ?>
+							</p>
 
-							</div>
-					<?php endwhile;
-					endif;
-					$count_post++;
-					?>
-				</div>
-			</div>
-		</section>
+						</div>
+
+					</div>
+			<?php endwhile;
+			endif;
+			$count_post++;
+			?>
+		</div>
+	</div>
+</section>
 
 
 

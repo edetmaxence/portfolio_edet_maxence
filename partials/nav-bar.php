@@ -21,10 +21,10 @@ $headerMenu = array(
         <div class="row transform">
           <div class="col-lg-3 w-auto h-auto">
             <?php if (!empty(get_theme_mod('logo'))) : ?>
-              <img src="<?= get_theme_mod('logo') ?>" alt="logo" />
+              <img src="<?= get_theme_mod('logo') ?>" alt="logo"/>
             <?php endif; ?>
           </div>
-          <div class="col-2 col-lg color_gold">
+          <div class="d-none d-md-block d-lg-block col color_gold">
             <div class="row"><span class="fs-2"><?= get_theme_mod('landing_name') ?> </span></div>
             <div class="row"><span class="fs-4"><?= get_theme_mod('landing_activity') ?></span></div>
 
