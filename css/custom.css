@@ -96,27 +96,26 @@ section {
 }
 
 /* isotop */
+
 .grid {
-  margin: 0 auto;
+  margin: 0;
+  padding: 2rem;
   max-width: 1200px;
+
 }
 
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
 
 
 .grid-item {
-  width: 440px;
-  height: 324px;
-  padding-left: 0;
-  padding-right: 0;
-  background-color: black;
+  width: 500px;
+  height: 300px;
+  background-color: var(--bg-frame);
+  border-radius: 36px;
 }
 
-
+.grid-item:hover{
+  background: red;
+}
 
 .grid-item img {
   width: 100%;

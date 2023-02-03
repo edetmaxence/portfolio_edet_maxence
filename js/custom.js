@@ -1,14 +1,14 @@
 
 
 jQuery(document).ready(function () {
-  
+
     var url_string = window.location.href;
     var url = new URL(url_string);
     var type = url.searchParams.get("type");
   
     // Init Isotope
-    $grid = $('.grid').isotope({});
-  
+    $grid = jQuery('.grid').isotope({});
+
     $grid.isotope({ filter: '*' });
   
     if (type == 'web') {
@@ -22,25 +22,25 @@ jQuery(document).ready(function () {
       $grid.isotope({ filter: '.autre' });
     }
   
-    jQuery('.filter-button').off('click').on('click', function () {
+    jQuery('.filter-button').on('click', function () {
   
-     
-      if ($(this).attr('id') === 'filter-web') {
-        console.log("filter web");
+
+      if (jQuery(this).attr('id') === 'filter-web') {
+      
         $grid.isotope({ filter: '.web' });
       }
-      if ($(this).attr('id') === 'filter-mobile') {
+      if (jQuery(this).attr('id') === 'filter-mobile') {
   
         $grid.isotope({ filter: '.mobile' });
   
       }
-      if ($(this).attr('id') === 'filter-autre') {
+      if (jQuery(this).attr('id') === 'filter-autre') {
      
         $grid.isotope({ filter: '.autre' });
   
       }
   
-      if ($(this).attr('id') === 'filter-all') {
+      if (jQuery(this).attr('id') === 'filter-all') {
         $grid.isotope({ filter: '*' });
       }
     });
