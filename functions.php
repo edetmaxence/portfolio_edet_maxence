@@ -53,6 +53,8 @@ function theme_enqueue_styles()
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
     wp_enqueue_style('boostrapcss', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
     wp_enqueue_style('boostrap_icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
+    wp_enqueue_style('fontawesome', get_stylesheet_directory_uri().'/fonts/fontawesome-free-6.2.1-web/css/fontawesome.min.css');
+    wp_enqueue_style('solid.min.css', get_stylesheet_directory_uri().'/fonts/fontawesome-free-6.2.1-web/css/solid.min.css');
 
     wp_enqueue_style('w3', 'https://www.w3schools.com/w3css/4/w3.css', array());
 

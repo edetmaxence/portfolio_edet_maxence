@@ -67,48 +67,78 @@ $realisation_all = realisationAll();
 
 
 
-        <div class="grid">
-            <div class="grid-item mobile">
+    <div class="grid">
+        <?php
+        $counter_post = 0;
+        if ($realisation_all->have_posts()) : while ($realisation_all->have_posts()) : $realisation_all->the_post(); //var_dump(get_the_terms(get_post(),'categoriesrealisation'));
+                $url = get_field('url');
+                $title = get_the_title();
+                $mission = get_field('mission');
+                $img = get_the_post_thumbnail_url(get_the_ID(), 'medium');
 
-            </div>
-            
+        ?>
 
-        </div>
+                <div class=" grid-item flip-card col col-lg-4 col-md-4 m-3 <?php
+                                                                                    istop_classes(get_the_id());
+                                                                                    ?>" href="<?php the_permalink(); ?>
+								">
+
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <?php if (!empty($img)) : ?>
+                            <img class="img_card" src=" <?= $img ?>">
+                        <?php endif; ?>
+                        <?php if (empty($img)) : ?>
+                            <img class="disabled">
+                        <?php endif; ?>
+                        
+                        </div>
+                        <div class="flip-card-back">
+                            <h2><?= $title; ?></h2>
+                            <p><?= $mission; ?></p>
+                            <div>
+                            <?php if (!empty($url)) : ?>
+                                <a href="<?= $url ?>" target="_blank"><i class="fas fa-arrow-right"></i> Voir le site</a>
+                            <?php endif; ?>
+
+
+                            <?php if (empty($url)) : ?>
+                                <a class="disabled">&nbsp;</a>
+                            <?php endif; ?>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+        <?php
+                $counter_post++;
+            endwhile;
+        endif;
+        ?>
+
     </div>
 
+
+
 </div>
+
 
 
 <?php get_footer() ?>
 
 
 <?php /*
-            $counter_post = 0;
-            if ($realisation_all->have_posts()) : while ($realisation_all->have_posts()) : $realisation_all->the_post(); //var_dump(get_the_terms(get_post(),'categoriesrealisation'));
-                    $url = get_field('url');
-                    $title = get_the_title();
-                    $mission = get_field('mission');
-                    $img = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+            
 
-            ?>
+                        
 
-                    <div class="grid-item col col-lg-4 col-md-4 m-3
-									<?php
-                                    istop_classes(get_the_id());
-                                    ?>" href="<?php the_permalink(); ?>
-								">
-
-                        <?php if (!empty($img)) : ?>
-                            <img src=" <?= $img ?>">
-                        <?php endif; ?>
-
-                        <?php if (empty($img)) : ?>
-                            <img class="disabled">
-                        <?php endif; ?>
+                        
 
                         <div class="front_projet">
-                            <div class="pos_titre"> <?= $title; ?></div>
-                            <div class="pos_mission"> <?= $mission; ?></div>
+                            <div class="pos_titre"> </div>
+                            <div class="pos_mission"> </div>
 
                         </div>
                         <div class="footer-bar">
@@ -129,4 +159,4 @@ $realisation_all = realisationAll();
                     $counter_post++;
                 endwhile;
             endif;
-            */?>
+            */ ?>
