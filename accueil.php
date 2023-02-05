@@ -22,7 +22,7 @@ $title_section_prestations = get_field("title_section_prestations");
 	<div class="container-fluid">
 
 		<div class="row">
-			<div class="col-lg-12 col-md-12 d-none d-lg-block d-md-block">
+			<div class="col-lg-12 col-md-12 d-none d-lg-block d-md-block carousel-position">
 				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -64,7 +64,7 @@ $title_section_prestations = get_field("title_section_prestations");
 								<div class="circle_img">
 									<img class="circle_img" src="">
 									<?= get_the_post_thumbnail();
-																	?>
+									?>
 									<?php //<img class="circle_img" src="https://picsum.photos/300"> 
 									?>
 								</div>
@@ -75,7 +75,13 @@ $title_section_prestations = get_field("title_section_prestations");
 
 
 			</div>
+			<div class="col-lg-12 col-md-12  d-none d-lg-block d-md-block btn-scroll">
+				<div class="text-center ">
+					<a href="#section_prestations"><span></span></a>
+				</div>
+			</div>
 		</div>
+
 		<div class="d-flex d-lg-none d-md-none">
 			<div class="row text-center">
 				<div class="col-12">
@@ -102,7 +108,7 @@ $title_section_prestations = get_field("title_section_prestations");
 
 </section>
 
-<section id="prestations">
+<section id="section_prestations">
 	<div class="container-fluid">
 		<div class="text-center">
 

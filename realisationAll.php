@@ -19,7 +19,7 @@ $realisation_all = realisationAll();
     </div>
 
     <!-- groupe bouton --->
-    <div class="row text-center">
+    <div class="row text-center ">
         <div class="col-md-9 col-sm-10 offset-1">
 
             <div class="button-group filter-button-group" data-filter-group="categoriesrealisation">
@@ -78,7 +78,7 @@ $realisation_all = realisationAll();
 
         ?>
 
-                <div class=" grid-item flip-card col col-lg-4 col-md-4 m-3 <?php
+                <div class=" grid-item flip-card col col-lg-4 col-md-4 m-3 text-center <?php
                                                                                     istop_classes(get_the_id());
                                                                                     ?>" href="<?php the_permalink(); ?>
 								">
