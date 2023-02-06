@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Page Realisation
+Template Name: Page portfolio
 */
 
 get_header();
