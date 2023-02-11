@@ -13,9 +13,14 @@ jQuery(document).ready(function () {
 
   if (type == 'web') {
     $grid.isotope({ filter: '.web' });
+
+
   }
   if (type == 'mobile') {
     $grid.isotope({ filter: '.mobile' });
+  }
+  if (type == 'ecommerce') {
+    $grid.isotope({ filter: '.ecommerce' });
   }
 
   if (type == 'autre') {
@@ -26,7 +31,7 @@ jQuery(document).ready(function () {
 
 
     if (jQuery(this).attr('id') === 'filter-web') {
-
+      
       $grid.isotope({ filter: '.web' });
     }
     if (jQuery(this).attr('id') === 'filter-mobile') {
@@ -37,6 +42,10 @@ jQuery(document).ready(function () {
     if (jQuery(this).attr('id') === 'filter-autre') {
 
       $grid.isotope({ filter: '.autre' });
+
+    }
+    if (jQuery(this).attr('id') === 'filter-ecommerce') {
+      $grid.isotope({ filter: '.ecommerce' });
 
     }
 

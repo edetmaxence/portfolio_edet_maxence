@@ -13,6 +13,7 @@ $Soustitre = get_field("Soustitre");
 $apropos = get_field("apropos");
 $contacts = get_field("contacts");
 $title_section_prestations = get_field("title_section_prestations");
+$title_section_contact = get_field("title_section_contact");
 
 
 
@@ -112,7 +113,7 @@ $title_section_prestations = get_field("title_section_prestations");
 	<div class="container-fluid">
 		<div class="text-center">
 
-			<span class="color_gold display-4"><?= $title_section_prestations ?></span>
+			<h2 class="color_gold display-3"><?= $title_section_prestations ?></h2>
 		</div>
 		<div class="row pt-5 d-lg-flex d-md-flex justify-content-center">
 			<?php
@@ -138,6 +139,24 @@ $title_section_prestations = get_field("title_section_prestations");
 			?>
 		</div>
 	</div>
+</section>
+<section id=FormContact>
+	<div class="container-fluid">
+		<div class="text-center color_gold ">
+			<h2 class="display-3  pb-3"><?= $title_section_contact ?></h2>
+		</div>
+		<div class="row color_gold justify-content-center">
+			<div class="col-lg-12 col-6">
+
+				<?= do_shortcode('[contact-form-7 id="192" title="Formulaire de contact" html_class="form" ]'); ?>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
 </section>
 
 

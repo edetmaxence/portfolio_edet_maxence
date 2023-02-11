@@ -135,7 +135,7 @@ section {
 
 .redlink:hover {
   text-decoration: none;
-  background-color: #517879;
+  background-color: var(--main-color);
   text-align: center;
   color: white !important;
   fill: white;
@@ -426,4 +426,12 @@ ul {
   100% {
     opacity: 0;
   }
+}
+
+
+.btnValiderForm
+{
+    background-color: var(--main-color) !important;
+    color: var(--bg-frame);
+  
 }
