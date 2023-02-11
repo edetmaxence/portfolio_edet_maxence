@@ -15,7 +15,7 @@ $realisation_all = realisationAll();
 
 
     <div class="row text-center">
-        <span class="color_gold display-4">Mes Réalisations - Projets</span>
+        <h1 class="color_gold display-4"><?= get_the_title()?></h1>
     </div>
 
     <!-- groupe bouton --->
