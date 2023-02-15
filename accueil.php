@@ -62,13 +62,12 @@ $title_section_contact = get_field("title_section_contact");
 									<p><?= $apropos; ?></p>
 								</div>
 
-								<div class="circle_img">
-									<img class="circle_img" src="">
-									<?= get_the_post_thumbnail();
-									?>
-									<?php //<img class="circle_img" src="https://picsum.photos/300"> 
-									?>
+								<div >
+									<img class="circle_img" src="<?= get_the_post_thumbnail_url();
+									?>" alt="">
 								</div>
+
+
 							</div>
 						</div>
 					</div>
