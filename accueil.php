@@ -90,17 +90,16 @@ $title_section_contact = get_field("title_section_contact");
 					<!--Item 1 logo + prenom/nom + metier-->
 
 					<div class="p-3">
-						<h2 class="display-1">Maxence EDET</h2>
-						<p class="display-5 color_gold">Création de site web et de e-commerce</p>
+						<h2 class="display-1"><?= $titre; ?></h2>
+						<p class="display-5 color_gold"><?= $Soustitre; ?></p>
 
 					</div>
 					<div>
-						<img class="circle_img" src="https://picsum.photos/300" alt="photo_beau_gosse">
+					<img class="circle_img" src="<?= get_the_post_thumbnail_url();?>">
 					</div>
 					<div class="frame col mt-4">
-						<p>Jeune pationné d’informatique et de déveleppement web.
-							jeune entrepreneur n’hesité d-lg-flex justify-content-centerpas a ma contacter pour vos site internet.</p>
-					</div>
+					<p><?= $apropos; ?></p>		
+				</div>
 				</div>
 			</div>
 		</div>
