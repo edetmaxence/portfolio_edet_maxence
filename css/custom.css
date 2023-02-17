@@ -66,7 +66,7 @@ section {
   justify-content: center;
   align-items: center;
   display: flex;
-  
+
 }
 
 
@@ -96,7 +96,7 @@ section {
 .grid {
   margin: 0;
   padding: 2rem;
- 
+
 
 }
 
@@ -147,14 +147,17 @@ section {
 .color_gold {
   color: var(--main-color);
 }
-.carousel-position{
+
+.carousel-position {
   position: absolute;
-top: 16rem;
+  top: 16rem;
 }
-.btn-scroll{
+
+.btn-scroll {
   position: absolute;
-bottom: 12rem;
+  bottom: 12rem;
 }
+
 .carousel-inner {
 
 
@@ -194,8 +197,8 @@ bottom: 12rem;
 
 .circle_img {
   border-radius: 50%;
-  height:400px;
-  width:400px;
+  height: 400px;
+  width: 400px;
 
 
 }
@@ -268,12 +271,13 @@ ul {
   transform: scale(0.9);
 }
 
-.img_card{
+.img_card {
   width: 100%;
   height: 100%;
   border-radius: 36px;
-  background:red;
+  background: red;
 }
+
 .flip-card {
   width: 500px;
   height: 300px;
@@ -295,7 +299,8 @@ ul {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -314,13 +319,14 @@ ul {
   color: white;
   transform: rotateY(180deg);
   margin: 1rem;
-  padding-top:3rem;
+  padding-top: 3rem;
 }
-@media screen and  (min-width: 1000px)and (max-width: 1500px) {
+
+@media screen and (max-width: 1500px) {
   section {
     height: auto;
     padding-top: 1rem;
- 
+
   }
 
   .circle_img {
@@ -331,16 +337,17 @@ ul {
 
   }
 
-  
+
   .frame {
     width: auto;
     height: auto;
     background: var(--bg-frame);
     border-radius: 28px;
     padding: 1rem;
-    margin:2rem;
+    margin: 2rem;
 
-}
+  }
+
   .frame p {
     font-style: normal;
     font-size: 1.9em;
@@ -349,13 +356,16 @@ ul {
 
 
 }
-@media screen and (min-width: 800px) and (max-width:1000px){
+
+
+@media (min-width: 768px){
+
   section {
-    height: 110vh;
+    height: 130vh;
     padding-top: 1rem;
- 
-  
-}
+    
+
+  }
 }
 
 #section_bandeau a span {
@@ -369,6 +379,7 @@ ul {
   border-radius: 100%;
   box-sizing: border-box;
 }
+
 #section_bandeau a span::after {
   position: absolute;
   top: 50%;
@@ -383,6 +394,7 @@ ul {
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
+
 #section_bandeau a span::before {
   position: absolute;
   top: 0;
@@ -391,48 +403,55 @@ ul {
   content: '';
   width: 44px;
   height: 44px;
-  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
   border-radius: 100%;
   opacity: 0;
   -webkit-animation: sdb03 3s infinite;
   animation: sdb03 3s infinite;
   box-sizing: border-box;
 }
+
 @-webkit-keyframes sdb03 {
   0% {
     opacity: 0;
   }
+
   30% {
     opacity: 1;
   }
+
   60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @keyframes sdb03 {
   0% {
     opacity: 0;
   }
+
   30% {
     opacity: 1;
   }
+
   60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
 
 
-.btnValiderForm
-{
-    background-color: var(--main-color) !important;
-    color: var(--bg-frame);
-  
+.btnValiderForm {
+  background-color: var(--main-color) !important;
+  color: var(--bg-frame);
+
 }

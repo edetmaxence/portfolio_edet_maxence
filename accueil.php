@@ -75,7 +75,7 @@ $title_section_contact = get_field("title_section_contact");
 
 
 			</div>
-			<div class="col-lg-12 col-md-12  d-none d-lg-block d-md-block btn-scroll">
+			<div class="col-lg-12  d-none d-lg-block btn-scroll">
 				<div class="text-center ">
 					<a href="#section_prestations"><span></span></a>
 				</div>
@@ -97,7 +97,7 @@ $title_section_contact = get_field("title_section_contact");
 					<div>
 					<img class="circle_img" src="<?= get_the_post_thumbnail_url();?>">
 					</div>
-					<div class="frame col mt-4">
+					<div class="frame col-12 mt-4">
 					<p><?= $apropos; ?></p>		
 				</div>
 				</div>
