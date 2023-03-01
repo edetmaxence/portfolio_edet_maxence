@@ -38,14 +38,14 @@ $title_section_contact = get_field("title_section_contact");
 
 							</div>
 							<div class="container pt-5">
-								<div class="row text-center display-5 ">
-									<div class="col-lg-6">
+								<div class="row text-center display-6 ">
+									<div class="col-lg-6 col-md-6">
 										<a href="tel: <?= $contacts["telephone"]; ?>">
 											<i class="bi bi-telephone-outbound"></i>
 											<?= $contacts["telephone"]; ?>
 										</a>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-6 col-md-6">
 										<a href="mailto: <?= $contacts["email"]; ?>">
 											<i class="bi bi-envelope-at"></i>
 											<?= $contacts["email"]; ?>
@@ -58,7 +58,7 @@ $title_section_contact = get_field("title_section_contact");
 						<div class="carousel-item">
 							<div class="justify-content-center d-flex ">
 
-								<div class="frame">
+								<div class="frame ">
 									<p><?= $apropos; ?></p>
 								</div>
 
@@ -127,6 +127,7 @@ $title_section_contact = get_field("title_section_contact");
 							<p class="card-text pt-4 text-start">
 								<?= $contentPresta; ?>
 							</p>
+							
 
 						</div>
 

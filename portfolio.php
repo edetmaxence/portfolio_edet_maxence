@@ -74,6 +74,7 @@ $realisation_all = realisationAll();
 
 
 
+
     <div class="grid">
 
         <?php
@@ -102,9 +103,10 @@ $realisation_all = realisationAll();
                             <?php endif; ?>
 
                         </div>
-                        <div class="flip-card-back">
+                        <div class="flip-card-back ">
                             <h2><?= $title; ?></h2>
-                            <p><?= $mission; ?></p>
+                            <div class="justify-content-center">
+                                <p><?= $mission; ?></p></div>
                             <div>
                                 <?php if (!empty($url)) : ?>
                                     <a href="<?= $url ?>" target="_blank"><i class="fas fa-arrow-right"></i> Voir le site</a>
@@ -114,6 +116,9 @@ $realisation_all = realisationAll();
                                 <?php if (empty($url)) : ?>
                                     <a class="disabled">&nbsp;</a>
                                 <?php endif; ?>
+                            </div>
+                            <div>
+                                <a href="<?= get_permalink() ?>"> Voir plus</a>
                             </div>
 
                         </div>
@@ -137,35 +142,3 @@ $realisation_all = realisationAll();
 
 <?php get_footer() ?>
 
-
-<?php /*
-            
-
-                        
-
-                        
-
-                        <div class="front_projet">
-                            <div class="pos_titre"> </div>
-                            <div class="pos_mission"> </div>
-
-                        </div>
-                        <div class="footer-bar">
-
-                            <?php if (!empty($url)) : ?>
-                                <a href="<?= $url ?>" target="_blank"><i class="fas fa-arrow-right"></i> Voir le site</a>
-                            <?php endif; ?>
-
-
-                            <?php if (empty($url)) : ?>
-                                <a class="disabled">&nbsp;</a>
-                            <?php endif; ?>
-                        </div>
-
-
-                    </div>
-            <?php
-                    $counter_post++;
-                endwhile;
-            endif;
-            */ ?>

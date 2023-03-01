@@ -117,7 +117,7 @@ function wpm_custom_post_type()
         'show_in_rest' => true,
         'hierarchical' => false,
         'public' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'rewrite' => array('slug' => 'realisation'),
 
     );
@@ -179,7 +179,7 @@ function wpm_custom_post_type()
         'show_in_rest' => true,
         'hierarchical' => false,
         'public' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'rewrite' => array('slug' => 'prestation'),
 
     );

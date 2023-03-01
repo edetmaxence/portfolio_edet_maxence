@@ -169,11 +169,11 @@ section {
 
 
 .frame {
-  width: 800px;
+  width: 700px;
   height: auto;
   background: var(--bg-frame);
   border-radius: 28px;
-  text-align: center;
+ padding: 4rem;
 
 }
 
@@ -322,7 +322,7 @@ ul {
   padding-top: 3rem;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1000px) {
   section {
     height: auto;
     padding-top: 1rem;
@@ -352,6 +352,7 @@ ul {
     font-style: normal;
     font-size: 1.9em;
     color: var(--color-white);
+    padding: 2rem;
   }
 
 
