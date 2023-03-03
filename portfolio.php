@@ -106,7 +106,8 @@ $realisation_all = realisationAll();
                         <div class="flip-card-back ">
                             <h2><?= $title; ?></h2>
                             <div class="justify-content-center">
-                                <p><?= $mission; ?></p></div>
+                                <p><?= $mission; ?></p>
+                            </div>
                             <div>
                                 <?php if (!empty($url)) : ?>
                                     <a href="<?= $url ?>" target="_blank"><i class="fas fa-arrow-right"></i> Voir le site</a>
@@ -117,15 +118,16 @@ $realisation_all = realisationAll();
                                     <a class="disabled">&nbsp;</a>
                                 <?php endif; ?>
                             </div>
+                            <?php /*
                             <div>
                                 <a href="<?= get_permalink() ?>"> Voir plus</a>
                             </div>
-
+    */ ?>
                         </div>
                     </div>
                 </div>
 
-            <?php
+        <?php
                 $counter_post++;
 
             endwhile;
@@ -141,4 +143,3 @@ $realisation_all = realisationAll();
 
 
 <?php get_footer() ?>
-

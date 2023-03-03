@@ -153,10 +153,7 @@ section {
   top: 16rem;
 }
 
-.btn-scroll {
-  position: absolute;
-  bottom: 12rem;
-}
+
 
 .carousel-inner {
 
@@ -173,7 +170,7 @@ section {
   height: auto;
   background: var(--bg-frame);
   border-radius: 28px;
- padding: 4rem;
+  padding: 4rem;
 
 }
 
@@ -194,11 +191,15 @@ section {
   padding-top: 2rem;
   margin: 1rem;
 }
-
-.circle_img {
+img{
   border-radius: 50%;
   height: 400px;
   width: 400px;
+}
+.img_container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
 
 }

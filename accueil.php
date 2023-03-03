@@ -62,9 +62,9 @@ $title_section_contact = get_field("title_section_contact");
 									<p><?= $apropos; ?></p>
 								</div>
 
-								<div >
-									<img class="circle_img" src="<?= get_the_post_thumbnail_url();
-									?>" alt="">
+								<div class="img_container">
+									<img src="<?= get_the_post_thumbnail_url();
+												?>" alt="">
 								</div>
 
 
@@ -75,7 +75,7 @@ $title_section_contact = get_field("title_section_contact");
 
 
 			</div>
-			<div class="col-lg-12  d-none d-lg-block btn-scroll">
+			<div class="col-lg-12  d-none d-lg-block">
 				<div class="text-center ">
 					<a href="#section_prestations"><span></span></a>
 				</div>
@@ -95,11 +95,11 @@ $title_section_contact = get_field("title_section_contact");
 
 					</div>
 					<div>
-					<img class="circle_img" src="<?= get_the_post_thumbnail_url();?>">
+						<img class="circle_img" src="<?= get_the_post_thumbnail_url(); ?>">
 					</div>
 					<div class="frame col-12 mt-4">
-					<p><?= $apropos; ?></p>		
-				</div>
+						<p><?= $apropos; ?></p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -127,7 +127,7 @@ $title_section_contact = get_field("title_section_contact");
 							<p class="card-text pt-4 text-start">
 								<?= $contentPresta; ?>
 							</p>
-							
+
 
 						</div>
 
