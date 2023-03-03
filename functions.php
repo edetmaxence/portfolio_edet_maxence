@@ -110,7 +110,7 @@ function wpm_custom_post_type()
         'description' => __('Tous sur realisation'),
         'labels' => $RealisationLabels,
         'menu_icon'      => 'dashicons-megaphone',
-        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields',),
+        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields','etatRealisation'),
         'show_in_rest' => true,
         'hierarchical' => false,
         'public' => true,
@@ -142,7 +142,7 @@ function wpm_custom_post_type()
         'hierarchical'          => true,
         'labels'                => $labels_cat_realisation,
         'show_ui'               => true,
-        'show_in_rest'            => true,
+        'show_in_rest'          => true,
         'show_admin_column'     => true,
         'query_var'             => true,
         'rewrite'               => array('slug' => 'categoriesrealisation'),
@@ -150,7 +150,34 @@ function wpm_custom_post_type()
 
     register_taxonomy('categoriesrealisation', 'realisation', $args_cat_realisation);
 
+    $labels_etat_realisation = array(
+        'name'                       => _x("Etat réalisation", 'taxonomy general name'),
+        'singular_name'              => _x("Etat réalisation", "taxonomy singular name"),
+        'search_items'               => __('Rechercher une réalisationn'),
+        'popular_items'              => __('Etat populaires'),
+        'all_items'                  => __('Toutes les Etats'),
+        'edit_item'                  => __('Editer un etat'),
+        'update_item'                => __('Mettre à jour un etat'),
+        'add_new_item'               => __('Ajouter un nouvel etat'),
+        'new_item_name'              => __("Nom de l'etat"),
+        'add_or_remove_items'        => __('Ajouter ou supprimer un état'),
+        'choose_from_most_used'      => __('Choisir parmi les Etat les plus utilisées'),
+        'not_found'                  => __('Pas de Etat trouvées'),
+        'menu_name'                  => __('Etat des réalisations'),
+    );
 
+    $args_etat_realisation = array(
+        // Si 'hierarchical' est défini à true, notre taxonomie se comportera comme une catégorie standard
+        'hierarchical'          => true,
+        'labels'                => $labels_etat_realisation,
+        'show_ui'               => true,
+        'show_in_rest'          => true,
+        'show_admin_column'     => true,
+        'query_var'             => true,
+        'rewrite'               => array('slug' => 'etatRealisation'),
+    );
+
+    register_taxonomy('etatRealisation', 'realisation', $args_etat_realisation);
 
     $PrestationLabels = array(
         'name' => _x('Préstation', 'Post Type General Name'),

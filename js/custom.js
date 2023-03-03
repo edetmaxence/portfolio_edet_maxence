@@ -1,7 +1,7 @@
 
 
 jQuery(document).ready(function () {
-
+console.log('bite');
   var url_string = window.location.href;
   var url = new URL(url_string);
   var type = url.searchParams.get("type");
@@ -29,6 +29,7 @@ jQuery(document).ready(function () {
 
   if (type == 'encours') {
     $grid.isotope({ filter: '.encours' });
+   
   }
 
   
