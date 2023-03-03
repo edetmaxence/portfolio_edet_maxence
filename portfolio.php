@@ -65,6 +65,13 @@ $realisation_all = realisationAll();
                         </svg>
                         <span class="fw-bolder">AUTRE</span>
                     </a>
+                    <a class="filter-button  redlink" id="filter-encours">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-0-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z" />
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-8.012 4.158c1.858 0 2.96-1.582 2.96-3.99V7.84c0-2.426-1.079-3.996-2.936-3.996-1.864 0-2.965 1.588-2.965 3.996v.328c0 2.42 1.09 3.99 2.941 3.99Z" />
+                        </svg>
+                        <span class="fw-bolder">en cours</span>
+                    </a>
 
                 </ul>
 
@@ -79,7 +86,9 @@ $realisation_all = realisationAll();
 
         <?php
         $counter_post = 0;
-        if ($realisation_all->have_posts()) : while ($realisation_all->have_posts()) : $realisation_all->the_post(); //var_dump(get_the_terms(get_post(),'categoriesrealisation'));
+        
+        if ($realisation_all->have_posts()) : while ($realisation_all->have_posts()) : $realisation_all->the_post();
+
                 $url = get_field('url');
                 $title = get_the_title();
                 $mission = get_field('mission');
@@ -88,8 +97,8 @@ $realisation_all = realisationAll();
         ?>
 
                 <div class=" grid-item flip-card col col-lg-4 col-md-4 m-3 text-center <?php
-                                                                                        istop_classes(get_the_id());
-                                                                                        ?>" href="<?php the_permalink(); ?>
+                                                                                        istop_classes(get_the_ID());
+                                                                                        ?>
 								">
 
 

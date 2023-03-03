@@ -27,6 +27,12 @@ jQuery(document).ready(function () {
     $grid.isotope({ filter: '.autre' });
   }
 
+  if (type == 'encours') {
+    $grid.isotope({ filter: '.encours' });
+  }
+
+  
+
   jQuery('.filter-button').on('click', function () {
 
 
@@ -51,6 +57,10 @@ jQuery(document).ready(function () {
 
     if (jQuery(this).attr('id') === 'filter-all') {
       $grid.isotope({ filter: '*' });
+    }
+    if (jQuery(this).attr('id') === 'filter-encours') {
+      $grid.isotope({ filter: '.encours' });
+      
     }
   });
 
