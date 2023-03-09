@@ -19,11 +19,10 @@ $title_section_contact = get_field("title_section_contact");
 
 ?>
 
-<section id="section_bandeau">
+<div id="section_bandeau">
 	<div class="container-fluid">
-
-		<div class="row">
-			<div class="col-lg-12 col-md-12 d-none d-lg-block d-md-block carousel-position">
+		<div class="row align-item-center">
+			<div class="col-lg-12  d-none d-lg-flex justify-content-center">
 				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -37,22 +36,28 @@ $title_section_contact = get_field("title_section_contact");
 								<span class="display-5 color_gold"> <?= $Soustitre; ?></span>
 
 							</div>
-							<div class="container pt-5">
-								<div class="row text-center display-6 ">
-									<div class="col-lg-6 col-md-6">
-										<a href="tel: <?= $contacts["telephone"]; ?>">
+							
+								<div class="fs-1 pt-5">
+									<div class="row text-center">
+									<a href="tel: <?= $contacts["telephone"]; ?>">
 											<i class="bi bi-telephone-outbound"></i>
 											<?= $contacts["telephone"]; ?>
 										</a>
 									</div>
-									<div class="col-lg-6 col-md-6">
-										<a href="mailto: <?= $contacts["email"]; ?>">
+									<div class="row text-center ">
+									<a href="mailto: <?= $contacts["email"]; ?>">
 											<i class="bi bi-envelope-at"></i>
 											<?= $contacts["email"]; ?>
 										</a>
 									</div>
+									
+										
+								
+									
+										
+									
 								</div>
-							</div>
+							
 						</div>
 						<!--Item 2 description + photo de beau gosse-->
 						<div class="carousel-item">
@@ -72,48 +77,47 @@ $title_section_contact = get_field("title_section_contact");
 						</div>
 					</div>
 				</div>
-
-
 			</div>
-			<div class="col-lg-12  d-none d-lg-block">
+
+
+
+			<div class="col-lg-12  d-none d-lg-flex">
 				<div class="text-center ">
 					<a href="#section_prestations"><span></span></a>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="d-flex d-lg-none d-md-none">
-			<div class="row text-center">
-				<div class="col-12">
+	<div class="row text-center d-flex d-lg-none">
+		<div class="col-12">
 
+			<!--Item 1 logo + prenom/nom + metier-->
 
-					<!--Item 1 logo + prenom/nom + metier-->
+			<div class="p-3">
+				<h2 class="display-1"><?= $titre; ?></h2>
+				<p class="display-5 color_gold"><?= $Soustitre; ?></p>
 
-					<div class="p-3">
-						<h2 class="display-1"><?= $titre; ?></h2>
-						<p class="display-5 color_gold"><?= $Soustitre; ?></p>
-
-					</div>
-					<div>
-						<img class="circle_img" src="<?= get_the_post_thumbnail_url(); ?>">
-					</div>
-					<div class="frame col-12 mt-4">
-						<p><?= $apropos; ?></p>
-					</div>
-				</div>
+			</div>
+			<div>
+				<img class="circle_img" src="<?= get_the_post_thumbnail_url(); ?>">
+			</div>
+			<div class="frame col-12 mt-4">
+				<p><?= $apropos; ?></p>
 			</div>
 		</div>
 	</div>
 
-</section>
 
-<section id="section_prestations">
+</div>
+
+<div id="section_prestations">
 	<div class="container-fluid">
 		<div class="text-center">
 
 			<h2 class="color_gold display-3"><?= $title_section_prestations ?></h2>
 		</div>
-		<div class="row pt-5 d-lg-flex d-md-flex justify-content-center">
+		<div class="row  justify-content-center">
 			<?php
 			$count_post = 0;
 			if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
@@ -138,8 +142,10 @@ $title_section_contact = get_field("title_section_contact");
 			?>
 		</div>
 	</div>
-</section>
-<section id=FormContact>
+</div>
+
+
+<div id=section_contact>
 	<div class="container-fluid">
 		<div class="text-center color_gold ">
 			<h2 class="display-3  pb-3"><?= $title_section_contact ?></h2>
@@ -156,7 +162,7 @@ $title_section_contact = get_field("title_section_contact");
 
 	</div>
 
-</section>
+</div>
 
 
 
