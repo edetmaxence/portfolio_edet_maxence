@@ -156,8 +156,6 @@ section {
 
 
 .carousel-inner {
-
-
   width: 100%;
   overflow: hidden;
   height: 500px;
@@ -191,15 +189,17 @@ section {
   padding-top: 2rem;
   margin: 1rem;
 }
-img{
+
+img {
   border-radius: 50%;
   height: 400px;
   width: 400px;
 }
+
 .img_container {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 
 }
@@ -360,19 +360,18 @@ ul {
 }
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
   section {
     height: 130vh;
     padding-top: 1rem;
-    
+
 
   }
 }
 
 #section_bandeau a span {
   position: absolute;
-  top: 0;
   left: 50%;
   width: 46px;
   height: 46px;
@@ -399,8 +398,6 @@ ul {
 
 #section_bandeau a span::before {
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: -1;
   content: '';
   width: 44px;
@@ -456,4 +453,13 @@ ul {
   background-color: var(--main-color) !important;
   color: var(--bg-frame);
 
+}
+
+.btn-outline-primary, .wpcf7 input[type="submit"] {
+  color: black;
+  border-color: var(--main-color);
+}
+.wpcf7 input[type="submit"]:hover {
+  color: var(--color-white);
+  border-color: var(--main-color);
 }

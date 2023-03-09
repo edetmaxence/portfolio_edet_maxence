@@ -19,17 +19,16 @@ $title_section_contact = get_field("title_section_contact");
 
 ?>
 
-<section id="section_bandeau">
-	<div class="container-fluid">
-
-		<div class="row">
-			<div class="col-lg-12 col-md-12 d-none d-lg-block d-md-block carousel-position">
-				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					</div>
-					<div class="carousel-inner">
+<div  id="section_bandeau">
+        <div class="container-fluid">
+            <div class="row align-item-center">
+                <div class="col-lg-12 d-none d-lg-flex justify-content-center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
 						<!--Item 1 logo + prenom/nom + metier-->
 						<div class="carousel-item active">
 							<div class="text-center">
@@ -105,9 +104,9 @@ $title_section_contact = get_field("title_section_contact");
 		</div>
 	</div>
 
-</section>
+</div>
 
-<section id="section_prestations">
+<div id="section_prestations">
 	<div class="container-fluid">
 		<div class="text-center">
 
@@ -138,8 +137,8 @@ $title_section_contact = get_field("title_section_contact");
 			?>
 		</div>
 	</div>
-</section>
-<section id=FormContact>
+</div>
+<div id=FormContact>
 	<div class="container-fluid">
 		<div class="text-center color_gold ">
 			<h2 class="display-3  pb-3"><?= $title_section_contact ?></h2>
@@ -148,6 +147,7 @@ $title_section_contact = get_field("title_section_contact");
 			<div class="col-lg-12 col-6">
 
 				<?= do_shortcode('[contact-form-7 id="192" title="Formulaire de contact" html_class="form" ]'); ?>
+			
 			</div>
 		</div>
 
@@ -156,7 +156,7 @@ $title_section_contact = get_field("title_section_contact");
 
 	</div>
 
-</section>
+</div>
 
 
 

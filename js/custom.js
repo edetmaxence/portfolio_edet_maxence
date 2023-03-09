@@ -1,7 +1,7 @@
 
 
 jQuery(document).ready(function () {
-console.log('bite');
+
   var url_string = window.location.href;
   var url = new URL(url_string);
   var type = url.searchParams.get("type");
@@ -60,7 +60,7 @@ console.log('bite');
       $grid.isotope({ filter: '*' });
     }
     if (jQuery(this).attr('id') === 'filter-encours') {
-      $grid.isotope({ filter: '.encours' });
+      $grid.isotope({ sortBy: '.encours' });
       
     }
   });
