@@ -145,7 +145,7 @@ $title_section_contact = get_field("title_section_contact");
 </div>
 
 
-<div id=FormContact>
+<div id=section_contact>
 	<div class="container-fluid">
 		<div class="text-center color_gold ">
 			<h2 class="display-3  pb-3"><?= $title_section_contact ?></h2>

@@ -80,19 +80,25 @@ body {
     padding-top: 15rem;
   }
   
+  #section_contact{
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+  }
+  
   .frame {
-    width: 700px;
+    width: 700px !important;
     height: auto;
     background: var(--bg-frame);
     border-radius: 28px;
-    padding: 4rem;
+    padding: 2rem !important;
+    margin: 0 !important;
   
   }
   
   .frame p {
     font-style: normal;
-    font-weight: 400;
-    font-size: 41px;
+    font-weight: 400 !important;
+    font-size: 41px !important;
     line-height: 50px;
     color: var(--color-white);
   }
