@@ -19,7 +19,7 @@ $title_section_contact = get_field("title_section_contact");
 
 ?>
 
-<section id="section_bandeau">
+<div id="section_bandeau">
 	<div class="container-fluid">
 
 		<div class="row">
@@ -75,14 +75,14 @@ $title_section_contact = get_field("title_section_contact");
 
 
 			</div>
-			<div class="col-lg-12  d-none d-lg-block">
+			<div class="col-lg-12  d-none d-lg-flex">
 				<div class="text-center ">
 					<a href="#section_prestations"><span></span></a>
 				</div>
 			</div>
 		</div>
 
-		<div class="d-flex d-lg-none d-md-none">
+		<div class="d-flex d-lg-none">
 			<div class="row text-center">
 				<div class="col-12">
 
@@ -105,15 +105,15 @@ $title_section_contact = get_field("title_section_contact");
 		</div>
 	</div>
 
-</section>
+</div>
 
-<section id="section_prestations">
+<div id="section_prestations">
 	<div class="container-fluid">
 		<div class="text-center">
 
 			<h2 class="color_gold display-3"><?= $title_section_prestations ?></h2>
 		</div>
-		<div class="row pt-5 d-lg-flex d-md-flex justify-content-center">
+		<div class="row  justify-content-center">
 			<?php
 			$count_post = 0;
 			if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
@@ -138,8 +138,10 @@ $title_section_contact = get_field("title_section_contact");
 			?>
 		</div>
 	</div>
-</section>
-<section id=FormContact>
+</div>
+
+<?php /*
+<div id=FormContact>
 	<div class="container-fluid">
 		<div class="text-center color_gold ">
 			<h2 class="display-3  pb-3"><?= $title_section_contact ?></h2>
@@ -156,8 +158,8 @@ $title_section_contact = get_field("title_section_contact");
 
 	</div>
 
-</section>
-
+</div>
+*/ ?>
 
 
 
