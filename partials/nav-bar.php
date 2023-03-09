@@ -17,7 +17,7 @@ $headerMenu = array(
 
   <nav class="nav navbar navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="https://edetmaxence.fr">
         <div class="row transform">
           <div class="col-lg-3 w-auto h-auto">
             <?php if (!empty(get_theme_mod('logo'))) : ?>
