@@ -1,8 +1,9 @@
 :root {
-  --main-color: #9D891F;
+  --main-color: #D6B81E;
   --bg-body: rgba(40, 44, 51, 0.92);
   --bg-frame: #282C33;
   --color-white: rgba(255, 255, 255, 1);
+  --bg-svg: url('../svg/low-poly-grid-haikei.svg')
 
 }
 
@@ -62,6 +63,10 @@ body {
 
 @media screen and (min-width: 900px) {
 
+  section{
+    height: 100vh;
+    width: auto;
+  }
   .circle_img {
     width: 50%;
     height: auto;
@@ -69,20 +74,27 @@ body {
     margin: 1rem;
 
   }
-
+  
 
  
  #section_bandeau {
     padding-top: 10rem;
+    background: var(--bg-svg);
+    /* height: 100vh;
+    width: auto; */
   }
 
   #section_prestations {
     padding-top: 15rem;
+    /* height: 100vh;
+    width: auto; */
   }
   
   #section_contact{
     padding-top: 15rem;
     padding-bottom: 5rem;
+    height: 100vh;
+    width: auto;
   }
   
   .frame {
@@ -92,6 +104,7 @@ body {
     border-radius: 28px;
     padding: 2rem !important;
     margin: 0 !important;
+    max-height: 47vh;
   
   }
   
@@ -221,9 +234,16 @@ body {
 }
 
 img {
+  /*
   border-radius: 50%;
   height: 400px;
   width: 400px;
+ 
+  clip-path: circle(50% at 50% 50%); */
+  height: auto;
+  width: auto;
+  clip-path: circle(33.53% at 52.40% 32.81%);
+  object-fit: scale-down;
 }
 
 .img_container {
@@ -353,7 +373,15 @@ ul {
   padding-top: 3rem;
 }
 
+#section_bandeau {
 
+  background-image: var(--bg-svg);
+}
+#test{
+height: 100%;
+width: 100%;
+  background: var(--bg-svg);
+}
 
 
 #section_bandeau a span {

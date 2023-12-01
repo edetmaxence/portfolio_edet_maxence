@@ -19,7 +19,7 @@ $title_section_contact = get_field("title_section_contact");
 
 ?>
 
-<div id="section_bandeau">
+<section id="section_bandeau">
 	<div class="container-fluid">
 		<div class="row align-item-center">
 			<div class="col-lg-12  d-none d-lg-flex justify-content-center">
@@ -109,9 +109,9 @@ $title_section_contact = get_field("title_section_contact");
 	</div>
 
 
-</div>
+</section>
 
-<div id="section_prestations">
+<section id="section_prestations">
 	<div class="container-fluid">
 		<div class="text-center">
 
@@ -120,6 +120,7 @@ $title_section_contact = get_field("title_section_contact");
 		<div class="row  justify-content-center">
 			<?php
 			$count_post = 0;
+			
 			if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
 					$titrePresta = get_the_title();
 					$contentPresta = get_the_content();
@@ -142,9 +143,9 @@ $title_section_contact = get_field("title_section_contact");
 			?>
 		</div>
 	</div>
-</div>
+</section>
 
-
+<?php /*
 <div id=section_contact>
 	<div class="container-fluid">
 		<div class="text-center color_gold ">
@@ -156,13 +157,10 @@ $title_section_contact = get_field("title_section_contact");
 				<?= do_shortcode('[contact-form-7 id="192" title="Formulaire de contact" html_class="form" ]'); ?>
 			</div>
 		</div>
-
-
-
-
 	</div>
-
 </div>
+
+*/?>
 
 
 

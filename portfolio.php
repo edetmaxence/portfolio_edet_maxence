@@ -112,6 +112,7 @@ $realisation_all = realisationAll();
                                 <?php if (!empty($url)) : ?>
                                     <a href="<?= $url ?>" target="_blank"><i class="fas fa-arrow-right"></i> Voir le site</a>
                                 <?php endif; ?>
+                           
 
 
                                 <?php if (empty($url)) : ?>
