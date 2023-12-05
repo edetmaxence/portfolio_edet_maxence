@@ -21,95 +21,54 @@ $title_section_contact = get_field("title_section_contact");
 
 <section id="section_bandeau">
 	<div class="container-fluid">
-		<div class="row align-item-center">
-			<div class="col-lg-12  d-none d-lg-flex justify-content-center">
-				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					</div>
-					<div class="carousel-inner">
-						<!--Item 1 logo + prenom/nom + metier-->
-						<div class="carousel-item active">
-							<div class="text-center">
-								<h2 class="display-1 color_gold"><?= $titre; ?></h2>
-								<span class="display-5 color_gold"> <?= $Soustitre; ?></span>
+		<div class="row align-item-center ">
+			<div class="text-center">
+				<h2 class="display-1 color_gold"><?= $titre; ?></h2>
+				<span class="display-5 color_gold"> <?= $Soustitre; ?></span>
 
-							</div>
-							
-								<div class="fs-1 pt-5">
-									<div class="row text-center">
-									<a href="tel: <?= $contacts["telephone"]; ?>">
-											<i class="bi bi-telephone-outbound"></i>
-											<?= $contacts["telephone"]; ?>
-										</a>
-									</div>
-									<div class="row text-center ">
-									<a href="mailto: <?= $contacts["email"]; ?>">
-											<i class="bi bi-envelope-at"></i>
-											<?= $contacts["email"]; ?>
-										</a>
-									</div>
-									
-										
-								
-									
-										
-									
-								</div>
-							
-						</div>
-						<!--Item 2 description + photo de beau gosse-->
-						<div class="carousel-item">
-							<div class="justify-content-center d-flex ">
-
-								<div class="frame ">
-									<p><?= $apropos; ?></p>
-								</div>
-
-								<div class="img_container">
-									<img src="<?= get_the_post_thumbnail_url();
-												?>" alt="">
-								</div>
-
-
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 
+		</div>
+		<div class="row text-center fs-1 pt-5">
+			<span>
+				<a href="tel: <?= $contacts["telephone"]; ?>">
+					<i class="bi bi-telephone-outbound"></i>
+					<?= $contacts["telephone"]; ?>
+				</a>
+			</span>
+			<span>
+				<a href="mailto: <?= $contacts["email"]; ?>">
+					<i class="bi bi-envelope-at"></i>
+					<?= $contacts["email"]; ?>
+				</a>
+			</span>
+		</div>
+		<div class="row pt-5">
+			<div class="col-lg-12 d-flex">
 
-
-			<div class="col-lg-12  d-none d-lg-flex">
 				<div class="text-center ">
+					
 					<a href="#section_prestations"><span></span></a>
 				</div>
 			</div>
 		</div>
+
 	</div>
 
-	<div class="row text-center d-flex d-lg-none">
-		<div class="col-12">
-
-			<!--Item 1 logo + prenom/nom + metier-->
-
-			<div class="p-3">
-				<h2 class="display-1"><?= $titre; ?></h2>
-				<p class="display-5 color_gold"><?= $Soustitre; ?></p>
-
-			</div>
-			<div>
-				<img class="circle_img" src="<?= get_the_post_thumbnail_url(); ?>">
-			</div>
-			<div class="frame col-12 mt-4">
-				<p><?= $apropos; ?></p>
-			</div>
-		</div>
-	</div>
-
-
+	
 </section>
+
+<section id="section_apropos">
+	<div class="container-fluid">
+	<div class="row d-flex">
+		<div><img class="circle_img" src="<?= get_the_post_thumbnail_url(); ?>"></div>
+		<div><span><?= $apropos; ?></span></div>
+
+	</div>
+	</div>
+</section>
+
+
 
 <section id="section_prestations">
 	<div class="container-fluid">
@@ -120,7 +79,7 @@ $title_section_contact = get_field("title_section_contact");
 		<div class="row  justify-content-center">
 			<?php
 			$count_post = 0;
-			
+
 			if ($prestation_all->have_posts()) :	while ($prestation_all->have_posts()) : $prestation_all->the_post();
 					$titrePresta = get_the_title();
 					$contentPresta = get_the_content();
@@ -160,7 +119,7 @@ $title_section_contact = get_field("title_section_contact");
 	</div>
 </div>
 
-*/?>
+*/ ?>
 
 
 
